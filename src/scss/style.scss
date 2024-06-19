@@ -168,12 +168,14 @@ body {
         display: grid;
         gap:12px;
         text-align: center;
-
+        justify-items: center;
 
         &-title {
             font-weight: var(--fontWeightBold);
             color:var(--colTitle);
             font-size:2.25rem ;
+            position: relative;
+            display: inline-block;
         }
 
         &-sub {
@@ -193,6 +195,7 @@ body {
         @media (min-width: $mq) { 
 
             text-align: left;
+            justify-items: baseline;
 
             #{$self}__txt-title {font-size:2.5rem ; }
             #{$self}__txt-sub {font-size:1.25rem ;}
@@ -269,6 +272,23 @@ body {
     
         }
 
+    }
+
+    &--beta {
+        #{$self}__txt-title {
+            &:after {
+                content: "BETA";
+                color: #fff;
+                background-color: #f0a733;
+                padding: 4px;
+                font-size: .875rem;
+                position: absolute;
+                top: -18px;
+                right: -31px;
+                transform: rotate(6deg);
+
+            }
+        }
     }
 
     &--comingsoon {
