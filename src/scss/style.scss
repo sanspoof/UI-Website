@@ -17,8 +17,9 @@
     --colTitle:#010101;
     --colSubTitle:#313031;
     --colBodyTxt:#757575;
-
 } 
+
+$mq:760px;
 
 body {
     font-family: var(--fontFamily);
@@ -57,7 +58,7 @@ body {
     }
 
     &__header {
-        height:575px;
+        padding:180px 30px;
         //background-color: sandybrown;
         background: linear-gradient(to bottom, 
         transparent 0%, 
@@ -72,16 +73,28 @@ body {
 
     
     &__herotxt {
-        font-size:3.625rem;
+        font-size:2.625rem;
         font-weight: var(--fontWeightBold);
         line-height: 4rem;
         color:#010101;
     }
 
     &__herosubtxt {
-        font-size:1.625rem;
+        font-size:1.125rem;
         font-weight:  var(--fontWeightReg);        
         color:#A4B6CE;
+    }
+
+    @media (min-width: $mq) { 
+        
+        #{$self}__herotxt {
+            font-size:3.625rem;
+        }
+
+        &__herosubtxt {
+            font-size:1.625rem;
+        }
+        
     }
 
     &__tags {
@@ -127,51 +140,84 @@ body {
 
     }
 
+
+    @media (min-width: $mq) { 
+        
+        
+    }
+
 }
 
 .auiwork {
     $self:&;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap:50px;
     align-items: center;
     position:relative;
+
+    @media (min-width: $mq) { 
+
+        grid-template-columns: 1fr 1fr;
+
+    }
 
     &__txt {
 
         display: grid;
         gap:12px;
-        justify-content: baseline;
+        text-align: center;
 
 
         &-title {
             font-weight: var(--fontWeightBold);
             color:var(--colTitle);
-            font-size:2.5rem ;
+            font-size:2.25rem ;
         }
 
         &-sub {
             font-weight: var(--fontWeightSemi);
             color:var(--colSubTitle);
-            font-size:1.25rem ;
+            line-height: 1.9rem;
+            font-size:1.125rem ;
         }
 
         &-body {
             font-weight: var(--fontWeightReg);
             color:var(--colBodyTxt);
-            font-size:1.125rem ;
+            font-size:1rem ;
             line-height: 1.65rem;
+        }
+
+        @media (min-width: $mq) { 
+
+            text-align: left;
+
+            #{$self}__txt-title {font-size:2.5rem ; }
+            #{$self}__txt-sub {font-size:1.25rem ;}
+            #{$self}__txt-body {font-size:1.125rem ;}
+    
         }
     }
 
     &__herowrap {
         
+        order:-1;
+
         #{$self}__hero {
             user-select: none;
             pointer-events: none;
             border-radius: 20px;
             box-shadow: 0px 0px 20px rgba(0 0 0 / 30%);
+            max-width:100%;
         }
+
+        @media (min-width: $mq) { 
+
+            order:1;
+    
+        }
+
     }
 
     &__ctas {
@@ -179,6 +225,7 @@ body {
         display: flex;
         gap:6px;
         margin-top:10px;
+        justify-content: center;
 
         #{$self}__cta, #{$self}__ctagit {
             color:#fff;
@@ -213,6 +260,14 @@ body {
 
 
         }
+
+
+        @media (min-width: $mq) { 
+
+            justify-content: flex-start;
+    
+        }
+
     }
 
     &--comingsoon {
