@@ -75,7 +75,7 @@ body {
     &__herotxt {
         font-size:2.625rem;
         font-weight: var(--fontWeightBold);
-        line-height: 4rem;
+        line-height: 3.25rem;
         color:#010101;
     }
 
@@ -89,6 +89,7 @@ body {
         
         #{$self}__herotxt {
             font-size:3.625rem;
+            line-height: 4rem;
         }
 
         &__herosubtxt {
