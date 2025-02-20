@@ -99,6 +99,12 @@ body {
     &__herosubtxt {
         font-size:1.125rem;
         font-weight:  var(--fontWeightReg);        
+        color:rgb(111, 134, 163);
+    }
+
+    &__disclaimer {
+        font-size:0.875rem;
+        font-weight:  var(--fontWeightReg);        
         color:#A4B6CE;
     }
 
