@@ -48,7 +48,9 @@ body {
         align-items: center;
         justify-content: space-between;
         z-index: 10;
-        border-bottom: 1px solid rgba(0 0 0 / 8%);
+        
+        max-width: 1200px;
+        margin: auto;
     }
 
     &__linked {
@@ -98,6 +100,7 @@ body {
         gap:20px;
         align-content: center;
         border-bottom: 1px solid rgba(0 0 0 / 8%);
+        border-top: 1px solid rgba(0 0 0 / 8%);
         background-color: #f6f6fc;
 
         @media (min-width: $mq) { 
