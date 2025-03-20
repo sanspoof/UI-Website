@@ -4,7 +4,7 @@
 :root {
     --bodyPadding:64px;
     --navpadding:var(--bodyPadding);
-    --navHeight:70px;
+    --navHeight:55px;
     --fontFamily: "basic-sans", sans-serif;
     --fontWeightReg:400;
     --fontWeightSemi:600;
@@ -36,6 +36,11 @@ body {
     font-family: var(--fontFamily);
 }
 
+*:focus-visible {
+    outline: 2px solid #000;
+    outline-offset: 2px;
+}
+
 .aui { 
     $self:&;
     background-color: #fff;
@@ -63,7 +68,7 @@ body {
 
     &__navtext {
         font-weight: var(--fontWeightMegaBold);
-        font-size:0.875rem;
+        font-size:0.75rem;
         text-transform: uppercase;
         letter-spacing: 0.20rem;
         color:#010101;
@@ -76,6 +81,7 @@ body {
             position: absolute;
             bottom:-1px;
             left:0px;
+            opacity: 0;
             background-color: #010101;
             transition:all linear 0.08s;
         }
@@ -83,7 +89,8 @@ body {
 
         &:hover {
             &:before {
-                bottom:1px;
+                opacity:1;
+                bottom:-4px;
                 background-color: var(--grad1);
             }
         }
@@ -289,11 +296,6 @@ body {
 
             &:active {
                 transform: translateY(2px);
-            }
-
-            &:focus-visible {
-                outline: 2px solid #000;
-                outline-offset: 2px;
             }
 
         }
