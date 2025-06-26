@@ -1,22 +1,5 @@
-/*
- * The Typekit service used to deliver this font or fonts for use on websites
- * is provided by Adobe and is subject to these Terms of Use
- * http://www.adobe.com/products/eulas/tou_typekit. For font license
- * information, see the list below.
- *
- * basic-sans:
- *   - http://typekit.com/eulas/00000000000000007735abd4
- *   - http://typekit.com/eulas/00000000000000007735abd7
- *   - http://typekit.com/eulas/00000000000000007735abe8
- *   - http://typekit.com/eulas/00000000000000007735abe6
- *   - http://typekit.com/eulas/00000000000000007735abed
- *   - http://typekit.com/eulas/00000000000000007735abf2
- *
- * © 2009-2025 Adobe Systems Incorporated. All Rights Reserved.
- */
-/*{"last_published":"2025-03-19 09:43:28 UTC"}*/
-
 @import url("https://p.typekit.net/p.css?s=1&k=frx2auv&ht=tk&f=35472.35473.35474.35476.35477.35478&a=193972351&app=typekit&e=css");
+@import "tailwindcss";
 
 @font-face {
 font-family:"basic-sans";
@@ -54,4 +37,23 @@ src:url("https://use.typekit.net/af/721f9c/00000000000000007735abf2/30/l?primer=
 font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
 }
 
-.tk-basic-sans { font-family: "basic-sans",sans-serif; }
+body {
+    font-family: "basic-sans", sans-serif;
+}
+
+@theme {
+    --customShadow : 0 0 20px #0000004d;
+    --font-1125: 1.125rem;
+    --grad1: #7a36ff;
+    --grad2: #66a6ff;
+    --btnheight: 44px;
+    --projectmediamaxwidth:704px;
+    --linkedin:#0077b5;
+} 
+
+.gradientcolorfortext {
+        background: linear-gradient(90deg, var(--grad1), var(--grad2));
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-style: normal;
+}
