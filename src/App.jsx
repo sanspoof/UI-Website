@@ -8,7 +8,7 @@ import estreamVideo from './assets/estreamoverview.mp4';
 import superScaleVideo from './assets/superscale.mp4';
 import easyImageCompress from './assets/easyimagecompress.gif';
 import empireImg from './assets/empire.webp';
-import ff from './assets/ff.webp';
+import ff from './assets/FF.webp';
 import piano from './assets/piano.webp';
 import wwtbam from './assets/wwtbam.webp';
 
