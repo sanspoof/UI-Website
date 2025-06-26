@@ -4,13 +4,15 @@ import Header from './Components/Header/Header';
 import Hero from './Components/Hero/Hero';
 import ProjectContainer from './Components/ProjectContainer/ProjectContainer';
 import Project from './Components/Project/Project';
-import estreamVideo from './assets/estreamoverview.mp4'; 
-import superScaleVideo from './assets/superscale.mp4';
-import easyImageCompress from './assets/easyimagecompress.gif';
-import empireImg from './assets/empire.webp';
-import ff from './assets/FF.webp';
-import piano from './assets/piano.webp';
-import wwtbam from './assets/wwtbam.webp';
+import {
+  estreamVideo,
+  superScaleVideo,
+  easyImageCompress,
+  empireImg,
+  ff,
+  piano,
+  wwtbam,
+} from './assets';
 
 function App() {
   return (
