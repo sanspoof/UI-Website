@@ -17,7 +17,7 @@ function Project({
         <section className="grid lg:grid-cols-2 items-center gap-8 relative">
             {comingSoon && <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-100 text-black text-2xl font-bold">Coming Soon</div>}
             <div className={`flex text-center items-center lg:align-baseline lg:items-baseline lg:text-left gap-3 flex-col justify-items-start ${comingSoon ? "opacity-15 pointer-events-none select-none" : ""}`}>
-                <h2 className="relative text-4xl font-black w-fit">{name}{}{beta && <span className="absolute -top-2 text-lg rotate-6 bg-amber-500 text-white px px-2">Beta</span>}</h2>
+                <h2 className="relative text-4xl font-black w-fit">{name}{}{beta && <span className="absolute -top-2 ml-2 text-lg rotate-6 bg-orange-600 text-white px px-2">Beta</span>}</h2>
                 <h3 className="text-xl font-bold ">{subtitle}</h3>
                 <p className="text-base text-gray-500 font-medium text-(length:--font-1125)">{description}</p>
                 <div className="flex gap-1">
