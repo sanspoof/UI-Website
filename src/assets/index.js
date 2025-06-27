@@ -1,17 +1,7 @@
-import estreamVideo from './estreamoverview.mp4';
-import superScaleVideo from './superscale.mp4';
-import easyImageCompress from './easyimagecompress.gif';
-import empireImg from './empire.webp';
-import ff from './FF.webp';
-import piano from './piano.webp';
-import wwtbam from './wwtbam.webp';
-
-export {
-  estreamVideo,
-  superScaleVideo,
-  easyImageCompress,
-  empireImg,
-  ff,
-  piano,
-  wwtbam,
-};
+export { default as estreamVideo } from './estreamoverview.mp4';
+export { default as superScaleVideo } from './superscale.mp4';
+export { default as easyImageCompress } from './easyimagecompress.gif';
+export { default as empireImg } from './empire.webp';
+export { default as ff } from './ff.webp';
+export { default as piano } from './piano.webp';
+export { default as wwtbam } from './wwtbam.webp';
