@@ -7,8 +7,6 @@ function Hero() {
   const headerSubText = useRef(null);
   const headerButtons = useRef(null);
 
-  console.log(gsap);
-
 useEffect(() => {
   const tl = gsap.timeline();
   tl.fromTo(
