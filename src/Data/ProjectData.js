@@ -42,7 +42,7 @@ const ProjectData = [
   {
     name: "Empire Online Redux",
     subtitle: "A passion of mine is film, so using React and a headless CMS I've started to build a new version from the ground up...",
-    description: "As a huge fan of cinema, I've felt a need to redo a once favourite site of mine, no advertisements, no bloat. More a project to explore React and using data within. ",
+    description: "As a huge fan of cinema, I've felt a need to redo a once favourite site of mine, no advertisements, no bloat. A project for me to explore more advanced React concepts and to have some fun along the way. ",
     imgUrl: empireImg,
     videoURL:"",
     githubLink:"https://github.com/sanspoof/EmpireOnline/",
