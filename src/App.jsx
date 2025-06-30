@@ -24,8 +24,10 @@ function App() {
             videoURL={project.videoURL}
             linkText={project.linkText}
             githubLink={project.githubLink}
+            altGithubText={project.altGithubText}
             comingSoon={project.comingSoon}
             beta={project.beta}
+            InProgress={project.InProgress}
           />
 
         ))}
