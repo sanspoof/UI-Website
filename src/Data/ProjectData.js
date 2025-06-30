@@ -22,7 +22,7 @@ const ProjectData = [
   {
     name: "SuperScale",
     subtitle: "A passion of mine is playing guitar, I wanted the simplest way possible of referencing notes and scales on the guitar neck.",
-    description: "All other solutions available were either too complicated or not fit for purpose, so I created SuperScale for myself and hopefully a resource for others...",
+    description: "All other solutions available were either too complicated or not fit for purpose, so I created SuperScale for myself and hopefully a resource for others.  Lots more content for this site is coming soon, this includes chords, a metronome, tuner and hopefully much more.  Right now it is in beta, so please feel free to try it out and let me know what you think.",
     imgUrl: "",
     videoURL:superScaleVideo,
     link: "https://superscale.site",
