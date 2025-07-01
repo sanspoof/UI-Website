@@ -10,7 +10,7 @@ import {
 
 const ProjectData = [
   {
-    name: "eStream",
+    name: "eStream by Uniguest",
     subtitle: "My day job is working as the Lead UI/UX Developer for eStream",
     description: "eStream provides education and enterprise organizations with a sophisticated enterprise video, digital asset management and delivery solution, where media can easily be stored, created, managed, and delivered to employees, learners, and clients with ease. Used by over 2,000,000 people globally",
     imgUrl: "",
