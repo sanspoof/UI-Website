@@ -5,3 +5,5 @@ export { default as empireImg } from './empire.webp';
 export { default as ff } from './FF.webp';
 export { default as piano } from './piano.webp';
 export { default as wwtbam } from './wwtbam.webp';
+export { default as GitLogo } from './github-mark.svg';
+export { default as LinkedIn } from './linkedin.svg';
