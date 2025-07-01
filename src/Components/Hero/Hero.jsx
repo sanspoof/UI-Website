@@ -6,27 +6,39 @@ function Hero() {
   const headerText = useRef(null);
   const headerSubText = useRef(null);
   const headerButtons = useRef(null);
+const titles = [
+  "UI/UX Design",
+  "Prototyping",
+  "Frontend Development",
+  "Agile",
+  "Accessibility",
+  "Component Libraries",
+];
+const tagRefs = useRef([]);
+tagRefs.current = [];
+
 
 useEffect(() => {
   const tl = gsap.timeline();
+
   tl.fromTo(
     headerText.current,
     { opacity: 0, bottom: -10, position: "relative" },
-    { duration: 0.8, opacity: 1, bottom: 0, ease: "power4.out" }
+    { duration: 1, opacity: 1, bottom: 0, ease: "power4.out" }
   )
   .fromTo(
     headerSubText.current,
     { opacity: 0, bottom: -10, position: "relative" },
     { duration: 0.8, opacity: 1, bottom: 0, ease: "power4.out" },
-    "-=0.6" 
-  ).fromTo(
-    headerButtons.current,
-    { opacity: 0, bottom: -10, position: "relative" },
-    { duration: 0.8, opacity: 1, bottom: 0, ease: "power4.out" },
-    "-=0.6"  
+    "-=0.6"
+  )
+  .fromTo(
+    tagRefs.current,
+    { opacity: 0, y: 6 },
+    { opacity: 1, y: 0, duration: 0.45, stagger: 0.13, ease: "power3.out" },
+    "-=0.6" // Start a bit before previous finishes
   );
 }, []);
-
   return (
     <header
       className="py-25 lg:py-40 px-8 flex flex-col items-center gap-4 bg-blue-50 border-b border-b-gray-200"
@@ -39,12 +51,13 @@ useEffect(() => {
         An Experienced UI Designer &amp; Frontend Developer
       </h2>
       <div ref={headerButtons} className="flex flex-wrap gap-2 max-w-md align-center justify-center ">
-        <Tag title="UI/UX Design" />
-        <Tag title="Prototyping" />
-        <Tag title="Frontend Development" />
-        <Tag title="Agile" />
-        <Tag title="Accessibility" />
-        <Tag title="Component Libraries" />
+        {titles.map((title, index) => (
+          <Tag
+            key={title}
+            title={title}
+            ref={(el) => (tagRefs.current[index] = el)}
+          />
+        ))}
       </div>
     </header>
   );
