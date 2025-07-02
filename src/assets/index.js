@@ -7,3 +7,6 @@ export { default as piano } from './piano.webp';
 export { default as wwtbam } from './wwtbam.webp';
 export { default as GitLogo } from './github-mark.svg';
 export { default as LinkedIn } from './linkedin.svg';
+export { default as js } from './js.svg';
+export { default as css } from './css.svg';
+export { default as sass } from './sass.svg';
