@@ -20,6 +20,7 @@ function ProjectContainer() {
             comingSoon={project.comingSoon}
             beta={project.beta}
             InProgress={project.InProgress}
+            techstack={project.techstack}
           />
 
         ))}        

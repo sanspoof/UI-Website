@@ -12,7 +12,8 @@ function Project({
     altGithubText = false,
     comingSoon = false,
     beta = false,
-    InProgress = false
+    InProgress = false,
+    techstack = [],
 }) {
 
 
@@ -28,20 +29,36 @@ function Project({
                 <h3 className="text-xl font-bold ">{subtitle}</h3>
                 {/* <ArrowRightIcon className="size-6 text-gray-500" /> */}
                 {description.map((paragraph, index) => (
-                    <p key={index} className="text-base text-gray-500 font-medium text-md lg:text-(length:--font-1125)">
+                    <p key={index} className="text-base text-gray-500 lg:text-lg">
                     {paragraph}
                     </p>
                 ))}
-                <div className="flex flex-col lg:flex-row gap-1 items-center justify-center lg:justify-start">
-                {link && (
-                        <a href={link} className="flex w-fit  items-center px-6 h-(--btnheight) bg-fuchsia-700 text-amber-50 text-sm rounded-3xl hover:bg-fuchsia-900 active:translate-y-px" target="_blank" rel="noopener noreferrer">{linkText}</a>
-                )}
-                {githubLink && (
-                        <a href={githubLink} className="w-fit flex items-center px-6 h-(--btnheight) bg-transparent border-2 text-gray-950 text-sm rounded-3xl hover:bg-gray-900 hover:text-white active:translate-y-px" target="_blank" rel="noopener noreferrer">
-                            {altGithubText ? altGithubText : "View on GitHub"}
-                        </a>
-                )}
+
+                <div className="flex flex-col lg:flex-row justify-between w-full items-center lg:items-end gap-6 lg:gap-2">
+
+                        {/* {techstack.length > 0 && (
+                            <div className="flex flex-col gap-2">
+                                <h4 className="text-sm font-bold text-gray-600 ">Tech Stack</h4>
+                                <div className="flex flex-wrap gap-x-2.5">
+                                    {techstack.map((tech, index) => (
+                                        <img key={index} src={tech} alt={`Tech Stack ${index}`} className="w-6 h-6" />
+                                    ))}
+                                </div>
+                            </div>
+                        )}       */}
+                    <div className="flex lg:flex-row gap-2 items-center justify-center lg:justify-start">
+                        {link && (
+                                <a href={link} className="flex w-fit font-bold items-center shrink-0 px-6 h-(--btnheight) bg-fuchsia-700 text-amber-50 text-sm rounded-3xl hover:bg-fuchsia-900 active:translate-y-px" target="_blank" rel="noopener noreferrer">{linkText}</a>
+                        )}
+                        {githubLink && (
+                                <a href={githubLink} className="w-fit flex font-bold items-center shrink-0 px-6 h-(--btnheight) bg-transparent border-2 text-gray-950 text-sm rounded-3xl hover:bg-gray-900 hover:text-white active:translate-y-px" target="_blank" rel="noopener noreferrer">
+                                    {altGithubText ? altGithubText : "View on GitHub"}
+                                </a>
+                        )}
+                        </div>          
+
                 </div>
+
 
             </div>
             

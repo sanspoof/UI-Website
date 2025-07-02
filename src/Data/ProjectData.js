@@ -6,6 +6,8 @@ import {
   ff,
   piano,
   wwtbam,
+  js,css,sass,vercel,vite,tailwind,react,supabase,dotnet
+
 } from '../assets';
 
 const ProjectData = [
@@ -22,6 +24,11 @@ const ProjectData = [
     link: "https://uniguest.com/estream/",
     linkText: "Read More About eStream",
     githubLink: "",
+    techstack:[
+      js,
+      sass,
+      dotnet
+    ]
   }, 
   {
     name: "SuperScale",
@@ -33,7 +40,13 @@ const ProjectData = [
     linkText: "Go to SuperScale",
     githubLink:"https://github.com/sanspoof/SuperScale",
     beta:true,
-
+    techstack:[
+      js,
+      sass,
+      vercel,
+      supabase,
+      vite
+    ]
   },
   {
     name: "Empire Online Redux",
@@ -45,6 +58,13 @@ const ProjectData = [
     altGithubText: "View Progress on GitHub",
     comingSoon: false,
     InProgress: true,
+    techstack:[
+      js,
+      sass,
+      vercel,
+      react,
+      vite
+    ]
   },
   {
     name: "Easy Image Compress",
@@ -53,6 +73,9 @@ const ProjectData = [
     imgUrl: easyImageCompress,
     videoURL:"",
     githubLink:"https://github.com/sanspoof/EasyImgCompress",
+    techstack:[
+      js
+    ]
   },
   {
     name: "Fantasy Festival",
