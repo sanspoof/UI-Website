@@ -1,6 +1,7 @@
 import {
   estreamVideo,
   superScaleVideo,
+  portfolioVideo,
   easyImageCompress,
   empireImg,
   ff,
@@ -33,7 +34,10 @@ const ProjectData = [
   {
     name: "SuperScale",
     subtitle: "A passion of mine is playing guitar, I wanted the simplest way possible of referencing notes and scales on the guitar neck.",
-    description: ["All other solutions available were either too complicated or not fit for purpose, so I created SuperScale for myself and hopefully a resource for others.  Lots more content for this site is coming soon, this includes chords, a metronome, tuner and hopefully much more.  Right now it is in beta, so please feel free to try it out and let me know what you think."],
+    description: [
+      "All other solutions available were either too complicated or not fit for purpose, so I created SuperScale for myself and hopefully a resource for others.  Lots more content for this site is coming soon, this includes chords, a metronome, tuner and hopefully much more.  Right now it is in beta, so please feel free to try it out and let me know what you think.",
+      "Authentication is handled by Supabase and it is hosted on Vercel. The functionality is primarily implemented in JavaScript with ES6 modules"
+    ],
     imgUrl: "",
     videoURL:superScaleVideo,
     link: "https://superscale.site",
@@ -43,15 +47,19 @@ const ProjectData = [
     techstack:[
       js,
       sass,
-      vercel,
       supabase,
-      vite
+      vite,
+      vercel,
     ]
   },
   {
     name: "Empire Online Redux",
     subtitle: "A passion of mine is film, so using React and a headless CMS I've started to build a new version from the ground up...",
-    description: ["As a huge fan of cinema, I've felt a need to redo a once favourite site of mine, no advertisements, no bloat. A project for me to explore more advanced React concepts and to have some fun along the way."],
+    description: 
+    [
+      "As a huge fan of cinema, I've felt a need to redo a once favourite site of mine, no advertisements, no bloat. A project for me to explore more advanced React concepts and to have some fun along the way.",
+      "For the headless CMS I am using contentful, allowing me to easily manage the content and media for the site, I am currently iterating through a few designs and also converting the SCSS to Tailwind CSS.  So a work in progress...",
+    ],
     imgUrl: empireImg,
     videoURL:"",
     githubLink:"https://github.com/sanspoof/EmpireOnline/",
@@ -60,16 +68,41 @@ const ProjectData = [
     InProgress: true,
     techstack:[
       js,
-      sass,
-      vercel,
       react,
-      vite
+      tailwind,
+      vite,
+      vercel
+    ]
+  },
+  {
+    name: "This Portfolio Site",
+    subtitle: "Maybe this is cheating, but this site is a project in itself, built with React and Tailwind CSS",
+    description: 
+    [
+      "Having worked for the same company for around 14 years, building a portfolio site for myself always felt like a luxury I didn't need, as I was always busy with work and projects.",
+      "However, I felt it was time to showcase my work and skills, so here we are.  This site is built with React and Tailwind CSS, it is hosted on Vercel and uses GitHub for version control.",
+      "I built it to be simple, clean and easy to navigate.",
+    ],
+    imgUrl: "",
+    videoURL:portfolioVideo,
+    githubLink:"https://github.com/sanspoof/UI-Website/",
+    altGithubText: "View on GitHub",
+    comingSoon: false,
+    techstack:[
+      js,
+      react,
+      tailwind,
+      vite,
+      vercel
     ]
   },
   {
     name: "Easy Image Compress",
     subtitle: "Simple Utility that runs in the command line, it can help compress a large number of images",
-    description: ["We've all been there (kinda), you want to convert or compress a large number of images in a folder, but you dont have time? This easy little utility can help"],
+    description: [
+      "We've all been there (kinda), you want to convert or compress a large number of images in a folder, but you dont have time? This easy little utility can help.",
+      "Simply run from a command line and specify the folder containing the images and your desired output folder of choice."
+    ],
     imgUrl: easyImageCompress,
     videoURL:"",
     githubLink:"https://github.com/sanspoof/EasyImgCompress",

@@ -36,16 +36,16 @@ function Project({
 
                 <div className="flex flex-col lg:flex-row justify-between w-full items-center lg:items-end gap-6 lg:gap-2">
 
-                        {/* {techstack.length > 0 && (
+                        {techstack.length > 0 && (
                             <div className="flex flex-col gap-2">
                                 <h4 className="text-sm font-bold text-gray-600 ">Tech Stack</h4>
-                                <div className="flex flex-wrap gap-x-2.5">
-                                    {techstack.map((tech, index) => (
-                                        <img key={index} src={tech} alt={`Tech Stack ${index}`} className="w-6 h-6" />
+                                <div className="flex flex-wrap gap-x-2.5 group">
+                                    {techstack.map((tech, index) => ( 
+                                        <img title={tech.name} key={index} src={tech.icon} alt={tech.name} className="w-5 h-5 cursor-help transition-opacity duration-200 group-hover:opacity-25 hover:!opacity-100" />
                                     ))}
                                 </div>
                             </div>
-                        )}       */}
+                        )}      
                     <div className="flex lg:flex-row gap-2 items-center justify-center lg:justify-start">
                         {link && (
                                 <a href={link} className="flex w-fit font-bold items-center shrink-0 px-6 h-(--btnheight) bg-fuchsia-700 text-amber-50 text-sm rounded-3xl hover:bg-fuchsia-900 active:translate-y-px" target="_blank" rel="noopener noreferrer">{linkText}</a>
