@@ -62,6 +62,8 @@ const ProjectData = [
     ],
     imgUrl: empireImg,
     videoURL:"",
+    link: "https://empire-online.vercel.app/",
+    linkText: "Visit In-progress Site",
     githubLink:"https://github.com/sanspoof/EmpireOnline/",
     altGithubText: "View Progress on GitHub",
     comingSoon: false,
