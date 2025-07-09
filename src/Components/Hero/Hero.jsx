@@ -48,7 +48,7 @@ useEffect(() => {
         A collection of projects from me, <span className="gradientcolorfortext">Alex</span>
       </h1>
       <h2 ref={headerSubText} className="text-2xl text-center font-bold text-gray-800">
-        An Experienced UI Designer &amp; Frontend Developer
+        Experienced Frontend &amp; UI/UX Developer
       </h2>
       <div ref={headerButtons} className="flex flex-wrap gap-2 max-w-md align-center justify-center ">
         {titles.map((title, index) => (
