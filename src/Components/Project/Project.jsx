@@ -46,7 +46,7 @@ function Project({
                                 </div>
                             </div>
                         )}      
-                    <div className="flex lg:flex-row gap-2 items-center justify-center lg:justify-start">
+                    <div className="flex flex-wrap lg:flex-row gap-2 items-center justify-center lg:justify-start">
                         {link && (
                                 <a href={link} className="flex w-fit font-bold items-center shrink-0 px-6 h-(--btnheight) bg-fuchsia-700 text-amber-50 text-sm rounded-3xl hover:bg-fuchsia-900 active:translate-y-px" target="_blank" rel="noopener noreferrer">{linkText}</a>
                         )}
@@ -62,7 +62,7 @@ function Project({
 
             </div>
             
-            <figure className={`flex justify-center lg:justify-end ${comingSoon ? "opacity-15 pointer-events-none select-none" : ""}` }>
+            <figure className={`flex -order-1 lg:order-2 justify-center lg:justify-end ${comingSoon ? "opacity-15 pointer-events-none select-none" : ""}` }>
                 {imgUrl && <img className="rounded-xl shadow-(--customShadow) max-w-(--projectmediamaxwidth) w-full" src={imgUrl} alt={name} loading="lazy"  />}
                 {videoURL && (
                     <video height="auto" className="rounded-xl shadow-(--customShadow) max-w-(--projectmediamaxwidth) w-full" autoPlay muted playsInline loop >

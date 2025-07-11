@@ -34,8 +34,8 @@ useEffect(() => {
   )
   .fromTo(
     tagRefs.current,
-    { opacity: 0, y: 6 },
-    { opacity: 1, y: 0, duration: 0.45, stagger: 0.13, ease: "power3.out" },
+    { opacity: 0, y: 10 },
+    { opacity: 1, y: 0, duration: 0.25, stagger: 0.13, ease: "power2.out" },
     "-=0.6" // Start a bit before previous finishes
   );
 }, []);

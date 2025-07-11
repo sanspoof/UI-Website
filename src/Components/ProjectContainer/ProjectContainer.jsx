@@ -4,7 +4,7 @@ import ProjectData from '../../Data/ProjectData';
 function ProjectContainer() {
   return (
 
-        <div className="grid gap-32 px-8 lg:px-16 py-20">
+        <div className="grid gap-32 px-8 lg:px-16 py-8 lg:py-20">
         {ProjectData.map((project, id) => (
           <Project
             key={id}
