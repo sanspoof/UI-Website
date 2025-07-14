@@ -3,11 +3,12 @@ import {
   superScaleVideo,
   portfolioVideo,
   easyImageCompress,
+  EmpireVideo,
   empireImg,
   ff,
   piano,
   wwtbam,
-  js,css,sass,vercel,vite,tailwind,react,supabase,dotnet
+  js,css,sass,vercel,vite,tailwind,react,supabase,dotnet,gsap
 
 } from '../assets';
 
@@ -47,21 +48,22 @@ const ProjectData = [
     techstack:[
       js,
       sass,
+      gsap,
       supabase,
       vite,
       vercel,
     ]
   },
   {
-    name: "Empire Online Redux",
+    name: "REEL",
     subtitle: "A passion of mine is film, so using React and a headless CMS I've started to build a new version from the ground up...",
     description: 
     [
       "As a huge fan of cinema, I've felt a need to redo a once favourite site of mine, no advertisements, no bloat. A project for me to explore more advanced React concepts and to have some fun along the way.",
-      "For the headless CMS I am using contentful, allowing me to easily manage the content and media for the site, I am currently iterating through a few designs and also converting the SCSS to Tailwind CSS.  So a work in progress...",
+      "For the headless CMS I am using contentful, allowing me to easily manage the content and media for the site, this will evolve over time with potentially a move to using the TMDB API for more dynamic content.",
     ],
-    imgUrl: empireImg,
-    videoURL:"",
+    imgUrl: "",
+    videoURL:EmpireVideo,
     link: "https://empire-online.vercel.app/",
     linkText: "Visit In-progress Site",
     githubLink:"https://github.com/sanspoof/EmpireOnline/",
@@ -71,6 +73,7 @@ const ProjectData = [
     techstack:[
       js,
       react,
+      gsap,
       tailwind,
       vite,
       vercel

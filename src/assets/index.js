@@ -1,6 +1,7 @@
 export { default as estreamVideo } from './estreamdemo.mp4';
 export { default as superScaleVideo } from './superscale.mp4';
 export { default as portfolioVideo } from './portfolio.mp4'; 
+export { default as EmpireVideo } from './empire.mp4'; 
 export { default as easyImageCompress } from './easyimagecompress.gif';
 export { default as empireImg } from './empire.webp';
 export { default as ff } from './FF.webp';
@@ -18,6 +19,7 @@ import tailwindicon from './logos/tailwind.svg';
 import reacticon from './logos/react.svg';
 import supabaseicon from './logos/supabase.svg';
 import dotneticon from './logos/dotnet.svg';
+import gsapicon from './logos/gsap.svg';
 
 export const js = { name: "JavaScript", icon: jsicon };
 export const css = { name: "CSS", icon: cssicon };
@@ -28,3 +30,4 @@ export const tailwind = { name: "Tailwind CSS", icon: tailwindicon };
 export const react = { name: "React", icon: reacticon };
 export const supabase = { name: "Supabase", icon: supabaseicon };
 export const dotnet = { name: ".NET", icon: dotneticon };
+export const gsap = { name: "GreenSock Animation", icon: gsapicon };
