@@ -29,6 +29,13 @@ body {
     font-family: "basic-sans", sans-serif;
 }
 
+@layer components { 
+
+    .tippy-box {
+        @apply bg-gray-600 px-1.5 py-0.5 text-sm rounded-sm text-white font-bold;
+    }
+}
+
 @theme {
     --customShadow : 0 0 20px #0000004d;
     --font-1125: 1.125rem;

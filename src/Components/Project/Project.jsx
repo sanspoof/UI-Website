@@ -1,5 +1,6 @@
+import { useRef, useEffect } from "react";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
-
+import tippy from 'tippy.js';
 function Project({ 
     name, 
     subtitle, 
@@ -16,7 +17,24 @@ function Project({
     techstack = [],
 }) {
 
+    const techStackRef = useRef(null);
 
+    useEffect(() => {
+        if (techStackRef.current && techstack.length > 0) {
+
+            const techIcons = techStackRef.current.querySelectorAll('[data-tippy-content]');
+            
+            techIcons.forEach((icon) => {
+                tippy(icon, {
+                    content: icon.getAttribute('data-tippy-content'),
+                    placement: 'bottom',
+                    duration:0
+                });
+            });
+
+        }
+        
+    }, [techstack]);
 
     return (
         <section className="grid lg:grid-cols-2 items-center gap-8 relative">
@@ -39,9 +57,9 @@ function Project({
                         {techstack.length > 0 && (
                             <div className="flex flex-col gap-2">
                                 <h4 className="text-sm font-bold text-gray-600 ">Tech Stack</h4>
-                                <div className="flex flex-wrap gap-x-2.5 group">
+                                <div className="flex flex-wrap gap-x-2.5 group" ref={techStackRef}>
                                     {techstack.map((tech, index) => ( 
-                                        <img title={tech.name} key={index} src={tech.icon} alt={tech.name} className="w-5 h-5 cursor-help transition-opacity duration-200 group-hover:opacity-25 hover:!opacity-100" />
+                                        <img title={tech.name} key={index} src={tech.icon} alt={tech.name} data-tippy-content={tech.name} className="w-5 h-5 cursor-help transition-opacity duration-200 group-hover:opacity-25 hover:!opacity-100" />
                                     ))}
                                 </div>
                             </div>
