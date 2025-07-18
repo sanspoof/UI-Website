@@ -1,25 +1,45 @@
 import { useRef, useEffect } from "react";
 import Tag from "./tag";
-import gsap from "gsap";
+import gsapanim from "gsap";
+import {
+  js,css,sass,vercel,vite,tailwind,react,supabase,dotnet,gsap,figma,adobe
+
+} from '../../assets';
 
 function Hero() {
   const headerText = useRef(null);
   const headerSubText = useRef(null);
   const headerButtons = useRef(null);
+  const headerTechStack = useRef(null);
 const titles = [
   "UI/UX Design",
-  "Prototyping",
   "Frontend Development",
   "Agile",
   "Accessibility",
-  "Component Libraries",
 ];
+
+const techstack = [
+  js,
+  css,
+  sass,
+  vercel,
+  vite,
+  tailwind,
+  react,
+  supabase,
+  dotnet,
+  gsap,
+  figma,
+  adobe,  
+
+];
+
 const tagRefs = useRef([]);
 tagRefs.current = [];
 
 
 useEffect(() => {
-  const tl = gsap.timeline();
+  const tl = gsapanim.timeline();
 
   tl.fromTo(
     headerText.current,
@@ -43,21 +63,34 @@ useEffect(() => {
       ease: "back.out(1.7)" 
     },
     "-=0.4"
+  ).fromTo(
+    headerTechStack.current.children,
+    { opacity: 0, y: 15 },
+    { 
+      opacity: 1, 
+      y: 0, 
+      duration: 0.4, 
+      stagger: 0.08, 
+      ease: "back.out(1.4)" ,
+      clearProps: "transform",
+      
+    },
+    "-=0.2"
   );
 }, []);
 
   return (
     <header
-      className="py-25 lg:py-40 px-8 flex flex-col items-center gap-4 bg-blue-50 border-b border-b-gray-200"
+      className="py-25 lg:py-80 px-8 flex flex-col items-center gap-2 lg:gap-6 bg-white border-b border-gray-900900"
       aria-label="Header"
     >
-      <h1 ref={headerText} className="text-5xl/15 lg:text-7xl/20 font-black max-w-3xl text-center">
-        A collection of projects from me, <span className="gradientcolorfortext">Alex</span>
+      <h1 ref={headerText} className="text-4xl/10 lg:text-6xl/18 font-black text-center">
+        A collection of projects from me, Alex
       </h1>
-      <h2 ref={headerSubText} className="text-2xl text-center font-bold text-gray-800">
+      <h2 ref={headerSubText} className="text-xl lg:text-4xl text-center text-gray-800">
         Experienced Frontend &amp; UI/UX Developer
       </h2>
-      <div ref={headerButtons} className="flex flex-wrap gap-2 max-w-md align-center justify-center ">
+      <div ref={headerButtons} className="flex flex-wrap gap-2 align-center justify-center ">
         {titles.map((title, index) => (
           <Tag
             key={title}
@@ -66,6 +99,13 @@ useEffect(() => {
           />
         ))}
       </div>
+
+      <div className="flex flex-wrap justify-center gap-2.5 group max-w-3xs mt-2 lg:mt-0 lg:max-w-fit" ref={headerTechStack}>
+          {techstack.map((tech, index) => (
+              <img title={tech.name} key={index} src={tech.icon} alt={tech.name} className="w-5 h-5 transition-opacity duration-200 hover:translate-y-[2px]" />
+          ))}
+      </div>
+
     </header>
   );
 }

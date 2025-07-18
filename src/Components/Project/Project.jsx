@@ -48,7 +48,7 @@ function Project({
                 <h3 className="text-lg lg:text-xl font-bold ">{subtitle}</h3>
                 {/* <ArrowRightIcon className="size-6 text-gray-500" /> */}
                 {description.map((paragraph, index) => (
-                    <p key={index} className="text-base text-gray-500 lg:text-lg">
+                    <p key={index} className="text-base text-gray-600">
                     {paragraph}
                     </p>
                 ))}
@@ -67,10 +67,10 @@ function Project({
                         )}      
                     <div className="flex flex-wrap lg:flex-row gap-2 items-center justify-center lg:justify-start">
                         {link && (
-                                <a href={link} className="flex w-fit font-bold items-center shrink-0 px-6 h-(--btnheight) bg-fuchsia-700 text-amber-50 text-sm rounded-3xl hover:bg-fuchsia-900 active:translate-y-px" target="_blank" rel="noopener noreferrer">{linkText}</a>
+                                <a href={link} className="flex w-fit items-center shrink-0 px-6 h-(--btnheight) border-2 border-gray-900 bg-white text-black text-sm font-medium rounded-3xl hover:bg-black hover:text-white active:translate-y-px" target="_blank" rel="noopener noreferrer">{linkText}</a>
                         )}
                         {githubLink && (
-                                <a href={githubLink} className="w-fit flex font-bold items-center shrink-0 px-6 h-(--btnheight) bg-transparent border-2 text-gray-950 text-sm rounded-3xl hover:bg-gray-900 hover:text-white active:translate-y-px" target="_blank" rel="noopener noreferrer">
+                                <a href={githubLink} className="w-fit flex items-center shrink-0 px-6 h-(--btnheight) bg-transparent border-2 text-gray-950 text-sm font-medium rounded-3xl hover:bg-gray-900 hover:text-white active:translate-y-px" target="_blank" rel="noopener noreferrer">
                                     {altGithubText ? altGithubText : "View on GitHub"}
                                 </a>
                         )}

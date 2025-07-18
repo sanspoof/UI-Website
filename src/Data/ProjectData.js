@@ -18,8 +18,9 @@ const ProjectData = [
     subtitle: "My day job was working as the Lead UI/UX Developer for eStream by Uniguest",
     description: 
     [
-      "eStream provides education and enterprise organizations with a sophisticated enterprise video, digital asset management and delivery solution, where media can easily be stored, created, managed, and delivered to employees, learners, and clients with ease. Used by over 2,000,000 people globally", 
-      "Recently, I've finished a complete overhaul of the UI, this has been a huge project that has involved a lot of research, design and development.  The new UI is now live and I am very proud of the work that has gone into it.",
+      "At eStream, I led UI design and front-end development for a video platform used by over two million users across 2,000+ global organisations. I helped modernise the platform’s interface to support diverse user needs, improving performance, scalability, and accessibility.", 
+      "I led a complete UI redesign in collaboration with stakeholders and end users, turning feedback into clean, intuitive interfaces. I built a custom, accessible component framework focused on consistency and maintainability, with WCAG 2.0 AA compliance at its core.",
+      "Working in an Agile Scrum team, I managed the full UI lifecycle—from prototypes to release—using JavaScript, HTML, SCSS, and Visual Studio. I documented components in Storybook, mentored teammates, and helped establish front-end standards through code reviews and best practices."
     ],
     imgUrl: "",
     videoURL:estreamVideo,
@@ -85,8 +86,7 @@ const ProjectData = [
     description: 
     [
       "Having worked for the same company for around 14 years, building a portfolio site for myself always felt like a luxury I didn't need, as I was always busy with work and projects.",
-      "However, I felt it was time to showcase my work and skills, so here we are.  This site is built with React and Tailwind CSS, it is hosted on Vercel and uses GitHub for version control.",
-      "I built it to be simple, clean and easy to navigate.",
+      "However, I felt it was time to showcase my work and skills, so here we are.  This site is built with React and Tailwind CSS, it is hosted on Vercel and uses GitHub for version control."
     ],
     imgUrl: "",
     videoURL:portfolioVideo,

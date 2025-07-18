@@ -6,7 +6,7 @@ import {
 function Header() {
 
     return(
-        <nav className="h-[55px] flex justify-between items-center px-8 lg:px-16">
+        <nav className="h-[55px] flex justify-between items-center px-8 lg:px-16 border-b border-gray-900">
             <a className="text-sm font-black" href="https://www.alexui.dev">Alex UI</a>
             <div className="flex gap-4 items-center">
                 <a title="GitHub" className="" href="https://github.com/sanspoof/" target="_blank" rel="noopener noreferrer">

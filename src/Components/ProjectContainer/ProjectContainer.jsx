@@ -33,7 +33,7 @@ function ProjectContainer() {
             ease: "power3.out",
             scrollTrigger: {
               trigger: project,
-              start: "top 85%",
+              start: "top 95%",
               end: "bottom 15%",
               toggleActions: "play none none none",
               once:true

@@ -20,9 +20,11 @@ import reacticon from './logos/react.svg';
 import supabaseicon from './logos/supabase.svg';
 import dotneticon from './logos/dotnet.svg';
 import gsapicon from './logos/gsap.svg';
+import figmaicon from './logos/figma.svg';
+import adobeicon from './logos/adobe.svg';
 
 export const js = { name: "JavaScript", icon: jsicon };
-export const css = { name: "CSS", icon: cssicon };
+export const css = { name: "CSS", icon: cssicon }; 
 export const sass = { name: "Sass", icon: sassicon };
 export const vercel = { name: "Vercel", icon: vercelicon };
 export const vite = { name: "Vite", icon: viteicon };
@@ -31,3 +33,5 @@ export const react = { name: "React", icon: reacticon };
 export const supabase = { name: "Supabase", icon: supabaseicon };
 export const dotnet = { name: ".NET", icon: dotneticon };
 export const gsap = { name: "GreenSock Animation", icon: gsapicon };
+export const figma = { name: "Figma", icon: figmaicon };
+export const adobe = { name: "Adobe XD", icon: adobeicon };
