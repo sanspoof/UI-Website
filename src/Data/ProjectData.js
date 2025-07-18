@@ -95,6 +95,7 @@ const ProjectData = [
     comingSoon: false,
     techstack:[
       js,
+      gsap,
       react,
       tailwind,
       vite,

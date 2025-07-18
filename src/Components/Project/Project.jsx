@@ -1,5 +1,6 @@
 import { useRef, useEffect } from "react";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
+import { gsap } from 'gsap';
 import tippy from 'tippy.js';
 function Project({ 
     name, 
@@ -33,7 +34,7 @@ function Project({
             });
 
         }
-        
+
     }, [techstack]);
 
     return (
