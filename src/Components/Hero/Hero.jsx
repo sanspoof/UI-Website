@@ -43,21 +43,34 @@ useEffect(() => {
 
   tl.fromTo(
     headerText.current,
-    { opacity: 0, y: 30 },
-    { duration: 0.8, opacity: 1, y: 0, ease: "power3.out" }
+    { opacity: 0, y: 30, filter: "blur(8px)" },
+    { 
+      duration: 0.8, 
+      opacity: 1, 
+      y: 0, 
+      filter: "blur(0px)",
+      ease: "power3.out" 
+    }
   )
   .fromTo(
     headerSubText.current,
-    { opacity: 0, y: 20 },
-    { duration: 0.6, opacity: 1, y: 0, ease: "power3.out" },
+    { opacity: 0, y: 20, filter: "blur(6px)" },
+    { 
+      duration: 0.6, 
+      opacity: 1, 
+      y: 0, 
+      filter: "blur(0px)",
+      ease: "power3.out" 
+    },
     "-=0.5"
   )
   .fromTo(
     tagRefs.current,
-    { opacity: 0, y: 15 },
+    { opacity: 0, y: 15, filter: "blur(4px)" },
     { 
       opacity: 1, 
       y: 0, 
+      filter: "blur(0px)",
       duration: 0.4, 
       stagger: 0.08, 
       ease: "back.out(1.7)" 
@@ -65,15 +78,15 @@ useEffect(() => {
     "-=0.4"
   ).fromTo(
     headerTechStack.current.children,
-    { opacity: 0, y: 15 },
+    { opacity: 0, y: 15, filter: "blur(10px)" },
     { 
       opacity: 1, 
       y: 0, 
+      filter: "blur(0px)",
       duration: 0.4, 
       stagger: 0.08, 
-      ease: "back.out(1.4)" ,
+      ease: "back.out(1.4)",
       clearProps: "transform",
-      
     },
     "-=0.2"
   );
