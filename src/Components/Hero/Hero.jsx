@@ -88,7 +88,7 @@ useEffect(() => {
         A collection of projects from me, Alex
       </h1>
       <h2 ref={headerSubText} className="text-xl lg:text-4xl text-center text-gray-800">
-        Experienced Frontend &amp; UI/UX Developer
+        Experienced Front-end &amp; UI/UX Developer
       </h2>
       <div ref={headerButtons} className="flex flex-wrap gap-2 align-center justify-center ">
         {titles.map((title, index) => (
