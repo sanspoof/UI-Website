@@ -20,7 +20,7 @@ const ProjectData = [
     [
       "At eStream, I led UI design and front-end development for a video platform used by over two million users across 2,000+ global organisations. I helped modernise the platform’s interface to support diverse user needs, improving performance, scalability, and accessibility.", 
       "I led a complete UI redesign in collaboration with stakeholders and end users, turning feedback into clean, intuitive interfaces. I built a custom, accessible component framework focused on consistency and maintainability, with WCAG 2.0 AA compliance at its core.",
-      "Working in an Agile Scrum team, I managed the full UI lifecycle—from prototypes to release—using JavaScript, HTML, SCSS, and Visual Studio. I documented components in Storybook, mentored teammates, and helped establish front-end standards through code reviews and best practices."
+      "Working in an Agile Scrum team, I managed the full UI lifecycle—from prototypes to release using JavaScript, HTML, SCSS, and Visual Studio. I documented components in Storybook and helped establish front-end standards."
     ],
     imgUrl: "",
     videoURL:estreamVideo,

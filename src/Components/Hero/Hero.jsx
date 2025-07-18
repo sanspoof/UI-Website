@@ -6,11 +6,14 @@ import {
 
 } from '../../assets';
 
+//todo move tech stack to a separate component
+
 function Hero() {
   const headerText = useRef(null);
   const headerSubText = useRef(null);
   const headerButtons = useRef(null);
   const headerTechStack = useRef(null);
+
 const titles = [
   "UI/UX Design",
   "Frontend Development",
@@ -97,7 +100,7 @@ useEffect(() => {
       className="py-35 lg:py-80 px-8 flex flex-col items-center gap-2 lg:gap-6 bg-white border-b border-gray-900"
       aria-label="Header"
     >
-      <h1 ref={headerText} className="text-4xl/10 lg:text-6xl/18 font-black text-center">
+      <h1 ref={headerText} className="text-4xl/10 lg:text-6xl/18 font-bold text-center">
         A collection of projects from me, Alex
       </h1>
       <h2 ref={headerSubText} className="text-xl lg:text-4xl text-center text-gray-800">
