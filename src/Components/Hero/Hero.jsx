@@ -48,8 +48,9 @@ useEffect(() => {
     headerText.current,
     { opacity: 0, y: 30, filter: "blur(8px)" },
     { 
-      duration: 0.8, 
+      duration: 0.4, 
       opacity: 1, 
+      delay: 0.3,
       y: 0, 
       filter: "blur(0px)",
       ease: "power3.out" 
@@ -65,7 +66,7 @@ useEffect(() => {
       filter: "blur(0px)",
       ease: "power3.out" 
     },
-    "-=0.5"
+    "-=0.4"
   )
   .fromTo(
     tagRefs.current,
