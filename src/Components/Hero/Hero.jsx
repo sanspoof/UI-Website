@@ -13,6 +13,7 @@ function Hero() {
   const headerSubText = useRef(null);
   const headerButtons = useRef(null);
   const headerTechStack = useRef(null);
+    const headerElement = useRef(null);
 
 const titles = [
   "UI/UX Design",
@@ -93,11 +94,22 @@ useEffect(() => {
       clearProps: "transform",
     },
     "-=0.2"
+  )
+   .fromTo(
+    headerElement.current,
+    { borderBottomColor: "rgba(17, 24, 39, 0)" },
+    { 
+      borderBottomColor: "rgba(17, 24, 39, 1)",
+      duration: 0.8,
+      ease: "power2.out"
+    },
+    "-=0.1"
   );
 }, []);
 
   return (
-    <header
+    <header 
+      ref={headerElement}
       className="py-35 lg:pt-70 lg:pb-80 px-8 flex flex-col items-center gap-2 lg:gap-6 bg-white border-b border-gray-900"
       aria-label="Header"
     >
