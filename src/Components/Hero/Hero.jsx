@@ -98,7 +98,7 @@ useEffect(() => {
 
   return (
     <header
-      className="py-35 lg:py-80 px-8 flex flex-col items-center gap-2 lg:gap-6 bg-white border-b border-gray-900"
+      className="py-35 lg:pt-70 lg:pb-80 px-8 flex flex-col items-center gap-2 lg:gap-6 bg-white border-b border-gray-900"
       aria-label="Header"
     >
       <h1 ref={headerText} className="text-4xl/10 lg:text-6xl/18 font-bold text-center">

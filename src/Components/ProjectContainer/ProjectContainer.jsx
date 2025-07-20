@@ -29,7 +29,7 @@ function ProjectContainer() {
             opacity: 1,
             y: 0,
             duration: 0.8,
-            delay: index === 0 ? 1 : 0,
+            // delay: index === 0 ? 1 : 0,
             ease: "power3.out",
             scrollTrigger: {
               trigger: project,
