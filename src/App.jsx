@@ -3,17 +3,19 @@ import MainContainer from './Components/MainContainer/MainContainer';
 import Header from './Components/Header/Header';
 import Hero from './Components/Hero/Hero';
 import ProjectContainer from './Components/ProjectContainer/ProjectContainer';
-
+import { ThemeProvider } from './Context/ThemeContext';
 
 function App() {
   return (
-    <MainContainer>
-      <Header />
-      <Hero />
-      <ProjectContainer/>
-    </MainContainer>
+    <ThemeProvider>
+      <MainContainer>
+        <Header />
+        <Hero />
+        <ProjectContainer />
+      </MainContainer>
+    </ThemeProvider>
   );
-} 
+}
 
 export default App;
 

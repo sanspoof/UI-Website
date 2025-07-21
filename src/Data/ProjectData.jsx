@@ -1,3 +1,4 @@
+import { useTheme } from '../Context/ThemeContext';
 import {
   estreamVideo,
   superScaleVideo,
@@ -8,11 +9,14 @@ import {
   ff,
   piano,
   wwtbam,
-  js,css,sass,vercel,vite,tailwind,react,supabase,dotnet,gsap
+  js,css,sass,vercel, vercelLight,vite,tailwind,react,supabase,dotnet,gsap
 
 } from '../assets';
 
-const ProjectData = [
+export function useProjectData() {
+  const { isDark } = useTheme();
+
+  return [
   {
     name: "eStream by Uniguest",
     subtitle: "My day job was working as the Lead UI/UX Developer for eStream by Uniguest",
@@ -52,7 +56,7 @@ const ProjectData = [
       gsap,
       supabase,
       vite,
-      vercel,
+      isDark ? vercelLight : vercel,
     ]
   },
   {
@@ -68,7 +72,7 @@ const ProjectData = [
     link: "https://empire-online.vercel.app/",
     linkText: "Visit In-progress Site",
     githubLink:"https://github.com/sanspoof/EmpireOnline/",
-    altGithubText: "View Progress on GitHub",
+    altGithubText: "View on GitHub",
     comingSoon: false,
     InProgress: true,
     techstack:[
@@ -77,7 +81,7 @@ const ProjectData = [
       gsap,
       tailwind,
       vite,
-      vercel
+      isDark ? vercelLight : vercel,
     ]
   },
   {
@@ -99,7 +103,7 @@ const ProjectData = [
       react,
       tailwind,
       vite,
-      vercel
+      isDark ? vercelLight : vercel,
     ]
   },
   {
@@ -148,5 +152,5 @@ const ProjectData = [
   // },
 
 ];
-
-export default ProjectData;
+}
+export default useProjectData;

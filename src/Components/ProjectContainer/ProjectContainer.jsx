@@ -2,16 +2,17 @@ import { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Project from '../../Components/Project/Project';
-import ProjectData from '../../Data/ProjectData';
+import useProjectData from '../../Data/ProjectData'; 
 
 gsap.registerPlugin(ScrollTrigger);
 
 function ProjectContainer() {
+  const projectData = useProjectData(); 
   const containerRef = useRef(null);
   const projectRefs = useRef([]);
 
   useEffect(() => {
-    projectRefs.current = projectRefs.current.slice(0, ProjectData.length);
+    projectRefs.current = projectRefs.current.slice(0, projectData.length);
   }, []);
 
   useEffect(() => {
@@ -29,7 +30,7 @@ function ProjectContainer() {
             opacity: 1,
             y: 0,
             duration: 0.8,
-            // delay: index === 0 ? 1 : 0,
+            delay: index === 0 ? 1 : 0,
             ease: "power3.out",
             scrollTrigger: {
               trigger: project,
@@ -50,26 +51,13 @@ function ProjectContainer() {
 
   return (
     <div className="grid gap-32 px-8 lg:px-16 py-8 lg:py-20" ref={containerRef}>
-      {ProjectData.map((project, id) => (
+      {projectData.map((projectitem, id) => (
         <div
           key={id}
           ref={(el) => (projectRefs.current[id] = el)}
-          className="project-item"
         >
           <Project
-            name={project.name}
-            subtitle={project.subtitle}
-            description={project.description}
-            imgUrl={project.imgUrl}
-            link={project.link}
-            videoURL={project.videoURL}
-            linkText={project.linkText}
-            githubLink={project.githubLink}
-            altGithubText={project.altGithubText}
-            comingSoon={project.comingSoon}
-            beta={project.beta}
-            InProgress={project.InProgress}
-            techstack={project.techstack}
+            {...projectitem} // spread as the name corrolates with the projectdata data, fyi to self
           />
         </div>
       ))}

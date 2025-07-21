@@ -1,7 +1,7 @@
 import { useRef, useEffect } from "react";
-import { ArrowRightIcon } from "@heroicons/react/24/outline";
-import { gsap } from 'gsap';
+import { useTheme } from '../../Context/ThemeContext';
 import tippy from 'tippy.js';
+
 function Project({ 
     name, 
     subtitle, 
@@ -17,6 +17,8 @@ function Project({
     InProgress = false,
     techstack = [],
 }) {
+
+    const { isDark } = useTheme();
 
     const techStackRef = useRef(null);
 
@@ -41,14 +43,14 @@ function Project({
         <section className="grid lg:grid-cols-2 items-center gap-8 relative">
             {comingSoon && <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-100 text-black text-2xl font-bold">Coming Soon</div>}
             <div className={`flex text-center items-center lg:items-baseline lg:text-left gap-4 lg:gap-3 flex-col justify-items-start ${comingSoon ? "opacity-15 pointer-events-none select-none" : ""}`}>
-                <h2 className="flex flex-col items-center lg:items-baseline lg:block  relative text-3xl lg:text-4xl font-black w-fit">{name}
+                <h2 className={`flex flex-col items-center lg:items-baseline lg:block  relative text-3xl lg:text-4xl font-black w-fit ${isDark ? 'text-white' : 'text-black'}`}>{name}
                     {beta && <span className="w-fit lg:absolute lg:-top-2 lg:ml-2 text-lg lg:rotate-6 bg-orange-600 text-white px px-2">Beta</span>}
                     {InProgress && <span className="w-fit lg:absolute lg:-top-2 lg:ml-2 text-lg lg:rotate-6 bg-blue-600 text-white px px-2">In&nbsp;Progress</span>}
                 </h2>
-                <h3 className="text-lg lg:text-xl font-bold ">{subtitle}</h3>
+                <h3 className={`text-lg lg:text-xl font-bold ${isDark ? 'text-white' : 'text-black'}`}>{subtitle}</h3>
                 {/* <ArrowRightIcon className="size-6 text-gray-500" /> */}
                 {description.map((paragraph, index) => (
-                    <p key={index} className="text-sm sm:text-base text-gray-600 ">
+                    <p key={index} className={`text-sm sm:text-base ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
                     {paragraph}
                     </p>
                 ))}
@@ -57,7 +59,7 @@ function Project({
 
                         {techstack.length > 0 && (
                             <div className="flex flex-col gap-2">
-                                <h4 className="text-sm font-bold text-gray-600 ">Tech Stack</h4>
+                                <h4 className={`text-sm font-bold ${isDark ? 'text-gray-100' : 'text-gray-600'}`}>Tech Stack</h4>
                                 <div className="flex flex-wrap gap-x-2.5 group" ref={techStackRef}>
                                     {techstack.map((tech, index) => ( 
                                         <img title={tech.name} key={index} src={tech.icon} alt={tech.name} data-tippy-content={tech.name} className="w-5 h-5 cursor-help transition-opacity duration-200 group-hover:opacity-25 hover:!opacity-100" />
@@ -65,12 +67,15 @@ function Project({
                                 </div>
                             </div>
                         )}      
-                    <div className="flex flex-wrap lg:flex-row gap-2 items-center justify-center lg:justify-start">
+                    <div className="flex flex-wrap lg:flex-row lg:flex-nowrap gap-2 items-center justify-center lg:justify-start">
                         {link && (
-                                <a href={link} className="flex w-fit items-center shrink-0 px-6 h-(--btnheight) border-2 border-gray-900 bg-white text-black text-sm font-medium rounded-3xl hover:bg-black hover:text-white active:translate-y-px" target="_blank" rel="noopener noreferrer">{linkText}</a>
+                                <a href={link} className={`flex w-fit items-center shrink-0 px-4 h-(--btnheight) border-2 border-gray-900  text-sm font-medium rounded-3xl  active:translate-y-px 
+                                    ${isDark ? ' text-white border-white hover:bg-white hover:text-black' : 'hover:bg-black hover:text-white text-black'}`} 
+                                    target="_blank" rel="noopener noreferrer">{linkText}</a>
                         )}
                         {githubLink && (
-                                <a href={githubLink} className="w-fit flex items-center shrink-0 px-6 h-(--btnheight) bg-transparent border-2 text-gray-950 text-sm font-medium rounded-3xl hover:bg-gray-900 hover:text-white active:translate-y-px" target="_blank" rel="noopener noreferrer">
+                                <a href={githubLink} className={`flex w-fit items-center shrink-0 px-4 h-(--btnheight) border-2 border-gray-900  text-sm font-medium rounded-3xl  active:translate-y-px 
+                                    ${isDark ? ' text-white border-white hover:bg-white hover:text-black' : 'hover:bg-black hover:text-white text-black'}`}  target="_blank" rel="noopener noreferrer">
                                     {altGithubText ? altGithubText : "View on GitHub"}
                                 </a>
                         )}
