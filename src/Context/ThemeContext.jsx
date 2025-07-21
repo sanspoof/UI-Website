@@ -12,7 +12,7 @@ export function ThemeProvider({ children }) {
     } else if (htmlElement.classList.contains('light')) {
       return 'light';
     }
-    return localStorage.getItem('theme') || 'dark'; // defaults to dark
+    return localStorage.getItem('theme') || 'light'; // defaults to dark
   });
 
   useEffect(() => {
