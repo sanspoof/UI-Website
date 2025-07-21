@@ -48,7 +48,7 @@ function Project({
                 <h3 className="text-lg lg:text-xl font-bold ">{subtitle}</h3>
                 {/* <ArrowRightIcon className="size-6 text-gray-500" /> */}
                 {description.map((paragraph, index) => (
-                    <p key={index} className="text-base text-gray-600">
+                    <p key={index} className="text-sm sm:text-base text-gray-600 ">
                     {paragraph}
                     </p>
                 ))}
