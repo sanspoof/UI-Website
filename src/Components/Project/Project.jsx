@@ -87,9 +87,9 @@ function Project({
             </div>
             
             <figure className={`flex -order-1 lg:order-2 justify-center lg:justify-end ${comingSoon ? "opacity-15 pointer-events-none select-none" : ""}` }>
-                {imgUrl && <img className="rounded-xl shadow-(--customShadow) max-w-(--projectmediamaxwidth) w-full" src={imgUrl} alt={name} loading="lazy"  />}
+                {imgUrl && <img className={`rounded-xl  max-w-(--projectmediamaxwidth) w-full ${isDark ? 'shadow-(--customShadowDark)' : 'shadow-(--customShadowLight)'}`} src={imgUrl} alt={name} loading="lazy"  />}
                 {videoURL && (
-                    <video height="auto" className="rounded-xl shadow-(--customShadow) max-w-(--projectmediamaxwidth) w-full" autoPlay muted playsInline loop >
+                    <video height="auto" className={`rounded-xl  max-w-(--projectmediamaxwidth) w-full ${isDark ? 'shadow-(--customShadowDark)' : 'shadow-(--customShadowLight)'}`} autoPlay muted playsInline loop >
                         <source src={videoURL} type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>

@@ -30,7 +30,8 @@ body {
 }
 
 @theme {
-    --customShadow : 0 0 20px #0000004d;
+    --customShadowLight : 0 0 20px #0000004d;
+    --customShadowDark : 0 0 20px #ffffff40;
     --font-1125: 1.125rem;
     --grad1: #7a36ff;
     --grad2: #66a6ff;
