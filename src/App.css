@@ -22,6 +22,10 @@ body {
     font-family: "elza", sans-serif;
 }
 
+html.dark {
+    @apply bg-gray-950;
+}
+
 @custom-variant dark (&:where(.dark, .dark *));
 
 ::selection {
