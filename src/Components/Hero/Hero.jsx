@@ -15,8 +15,6 @@ function Hero() {
   const headerTechStack = useRef(null);
   const headerBorderBottom = useRef(null);
 
-const { isDark } = useTheme();
-
 const titles = [
   "UI/UX Design",
   "Frontend Development",
@@ -88,10 +86,10 @@ useEffect(() => {
       className={`py-35 lg:pt-70 lg:pb-80 px-8 flex flex-col items-center gap-2 lg:gap-6 `}
       aria-label="Header"
     >
-      <h1 ref={headerText} className={`text-4xl/10 lg:text-6xl/18 font-bold text-center ${isDark ? 'text-white' : 'text-black'}`}>
+      <h1 ref={headerText} className="text-4xl/10 lg:text-6xl/18 font-bold text-center dark:text-white text-black">
         A collection of projects from me, Alex
       </h1>
-      <h2 ref={headerSubText} className={`text-xl lg:text-4xl text-center ${isDark ? 'text-gray-300' : 'text-gray-800'}`}>
+      <h2 ref={headerSubText} className="text-xl lg:text-4xl text-center dark:text-gray-300 text-gray-800">
         Experienced Front-end &amp; UI/UX Developer
       </h2>
       <div ref={headerButtons} className="flex flex-wrap gap-2 align-center justify-center ">
@@ -99,7 +97,6 @@ useEffect(() => {
           <Tag
             key={title}
             title={title}
-            darkMode={isDark}
             ref={(el) => (tagRefs.current[index] = el)}
           />
         ))}
@@ -109,7 +106,7 @@ useEffect(() => {
           <TechStack delay={0.8} />
       </div>
     </header>
-    <div ref={headerBorderBottom} className={`w-full border-b ${isDark ? 'border-gray-400' : 'border-black'}`}></div>
+    <div ref={headerBorderBottom} className="w-full border-b dark:border-gray-400 border-black"></div>
     </>
   );
 }

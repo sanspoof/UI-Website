@@ -5,14 +5,14 @@ const ThemeContext = createContext();
 export function ThemeProvider({ children }) {
 
   const [theme, setTheme] = useState(() => {
-    // Check for existing class on HTML element, or use localStorage, or default to 'dark'
+   
     const htmlElement = document.documentElement;
     if (htmlElement.classList.contains('dark')) {
       return 'dark';
     } else if (htmlElement.classList.contains('light')) {
       return 'light';
     }
-    return localStorage.getItem('theme') || 'light'; // defaults to dark
+    return localStorage.getItem('theme') || 'light'; // light is default...problem set a mode based on system preference too as an option
   });
 
   useEffect(() => {

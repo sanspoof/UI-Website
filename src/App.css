@@ -22,6 +22,8 @@ body {
     font-family: "elza", sans-serif;
 }
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @layer components { 
 
     .tippy-box {
