@@ -34,7 +34,7 @@ useEffect(() => {
 }, []);
 
     return(
-        <nav ref={elNav} className="h-[55px] flex justify-between items-center px-8 lg:px-16 border-b dark:border-gray-400 border-gray-900">
+        <nav ref={elNav} className="h-[55px] flex justify-between items-center px-4 lg:px-8  border-b dark:border-gray-400 border-gray-900">
             <a className={`text-sm font-black p-0.5  ${isDark ? 'text-white hover:bg-white hover:text-black' : 'text-black hover:bg-black hover:text-white'}`} href="https://www.alexui.dev">Alex UI</a>
             <div className="flex gap-4 items-center">
                 <ColorModeButton />
