@@ -24,6 +24,12 @@ body {
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+::selection {
+  background-color: var(--grad1);
+  color: white;
+}
+
+
 @layer components { 
 
     .tippy-box {
