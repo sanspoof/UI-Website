@@ -2,6 +2,7 @@ import ColorModeButton from "../ColorMode/ColorMode";
 import { useTheme } from '../../Context/ThemeContext';
 import { useRef, useEffect } from "react";
 import gsap from "gsap";
+import { useGSAP } from '@gsap/react';
 import {
     GitLogo,
     GitLogoLight,
@@ -11,12 +12,14 @@ import {
 
 function Header() {
 
+    gsap.registerPlugin(useGSAP);
+
   const { isDark } = useTheme();
 
   const elNav = useRef(null);
 
 
-useEffect(() => {
+useGSAP(() => {
   const tl = gsap.timeline();
 
   tl.fromTo(
