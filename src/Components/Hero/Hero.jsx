@@ -86,13 +86,13 @@ useEffect(() => {
       className={`py-35 lg:pt-70 lg:pb-80 px-8 flex flex-col items-center gap-2 lg:gap-6 `}
       aria-label="Header"
     >
-      <h1 ref={headerText} className="text-4xl/10 lg:text-6xl/18 font-bold text-center dark:text-white text-black">
+      <h1 ref={headerText} className="text-4xl/10 lg:text-6xl/18 font-bold text-center dark:text-white text-black opacity-0">
         A collection of projects from me, Alex
       </h1>
-      <h2 ref={headerSubText} className="text-xl lg:text-4xl text-center dark:text-gray-300 text-gray-800">
+      <h2 ref={headerSubText} className="text-xl lg:text-4xl text-center dark:text-gray-300 text-gray-800 opacity-0">
         Experienced Front-end &amp; UI/UX Developer
       </h2>
-      <div ref={headerButtons} className="flex flex-wrap gap-2 align-center justify-center ">
+      <div ref={headerButtons} className="flex flex-wrap gap-2 align-center justify-center">
         {titles.map((title, index) => (
           <Tag
             key={title}

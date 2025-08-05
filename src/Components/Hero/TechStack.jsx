@@ -47,7 +47,7 @@ const tech = [
 
   return (
     <div 
-      className="flex flex-wrap justify-center gap-2.5 group max-w-3xs mt-2 lg:mt-0 lg:max-w-fit" 
+      className="flex flex-wrap justify-center gap-2.5 group max-w-3xs mt-2 lg:mt-0 lg:max-w-fit " 
       ref={techStackRef}
     >
       {tech.map((tech, index) => (
@@ -56,7 +56,7 @@ const tech = [
           key={index} 
           src={tech.icon} 
           alt={tech.name} 
-          className="w-5 h-5 hover:translate-y-[2px]" 
+          className="w-5 h-5 hover:translate-y-[2px] opacity-0" 
         />
       ))}
     </div>
