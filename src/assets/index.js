@@ -1,7 +1,7 @@
 export { default as estreamVideo } from './estreamdemo.mp4';
 export { default as superScaleVideo } from './superscale.mp4';
 export { default as portfolioVideo } from './portfolio.mp4'; 
-export { default as EmpireVideo } from './empire.mp4'; 
+export { default as REELVideo } from './REEL.mp4'; 
 export { default as easyImageCompress } from './easyimagecompress.gif';
 export { default as empireImg } from './empire.webp';
 export { default as ff } from './FF.webp';

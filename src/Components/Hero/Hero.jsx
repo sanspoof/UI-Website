@@ -16,10 +16,11 @@ function Hero() {
   const headerBorderBottom = useRef(null);
 
 const titles = [
-  "UI/UX Design",
   "Frontend Development",
+  "UI/UX Design",
   "Agile",
   "Accessibility",
+  "Component Libraries"
 ];
 
 
