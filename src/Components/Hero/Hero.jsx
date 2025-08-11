@@ -18,8 +18,7 @@ function Hero() {
 const titles = [
   "Frontend Development",
   "UI/UX Design",
-  "Agile",
-  "Accessibility",
+  "Accessibility", 
   "Component Libraries"
 ];
 
