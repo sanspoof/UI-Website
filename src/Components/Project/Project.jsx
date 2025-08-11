@@ -62,7 +62,7 @@ function Project({
                                 <h4 className="text-sm font-bold dark:text-gray-100 text-gray-600">Tech Stack</h4>
                                 <div className="flex flex-wrap gap-x-2.5 group" ref={techStackRef}>
                                     {techstack.map((tech, index) => ( 
-                                        <img title={tech.name} key={index} src={tech.icon} alt={tech.name} data-tippy-content={tech.name} className="w-5 h-5 cursor-help transition-opacity duration-200 group-hover:opacity-25 hover:!opacity-100" />
+                                        <img key={index} src={tech.icon} alt={tech.name} data-tippy-content={tech.name} className="w-5 h-5 cursor-help transition-opacity duration-200 group-hover:opacity-25 hover:!opacity-100" />
                                     ))}
                                 </div>
                             </div>

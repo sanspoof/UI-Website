@@ -37,7 +37,7 @@ html.dark {
 @layer components { 
 
     .tippy-box {
-        @apply bg-gray-900 px-1.5 py-0.5 text-xs rounded-sm text-white font-medium;
+        @apply bg-gray-900 px-1.5 py-1 text-xs rounded-sm text-white font-medium;
     }
 }
 

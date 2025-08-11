@@ -1,6 +1,8 @@
 import { useRef, useEffect } from 'react';
 import { useTheme } from '../../Context/ThemeContext';
 import gsapanim from "gsap";
+import tippy from 'tippy.js';
+
 import {
   js,css,sass,vercel,vercelLight,vite,tailwind,react,supabase,dotnet,gsap,figma,adobe
 
@@ -45,16 +47,33 @@ const tech = [
     }
   }, [delay]);
 
+    useEffect(() => {
+        if (techStackRef.current && techStackRef.current.children.length > 0) {
+
+            const techIcons = techStackRef.current.querySelectorAll('[data-tippy-content]');
+            
+            techIcons.forEach((icon) => {
+                tippy(icon, {
+                    content: icon.getAttribute('data-tippy-content'),
+                    placement: 'bottom',
+                    duration:0
+                });
+            });
+
+        }
+
+    }, [techstack]);
+
   return (
     <div 
-      className="flex flex-wrap justify-center gap-2.5 group max-w-3xs mt-2 lg:mt-0 lg:max-w-fit " 
+      className="flex flex-wrap justify-center gap-2.5 group max-w-3xs mt-2 lg:mt-0 lg:max-w-fit cursor-help" 
       ref={techStackRef}
     >
       {tech.map((tech, index) => (
         <img 
-          title={tech.name} 
           key={index} 
           src={tech.icon} 
+          data-tippy-content={tech.name}
           alt={tech.name} 
           className="w-5 h-5 hover:translate-y-[2px] opacity-0" 
         />
