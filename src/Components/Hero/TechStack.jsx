@@ -1,6 +1,7 @@
 import { useRef, useEffect } from 'react';
 import { useTheme } from '../../Context/ThemeContext';
 import gsapanim from "gsap";
+import { useGSAP } from '@gsap/react';
 import tippy from 'tippy.js';
 
 import {
@@ -29,7 +30,7 @@ const tech = [
   adobe,  
 ];  
 
-  useEffect(() => {
+  useGSAP(() => {
     if (techStackRef.current && techStackRef.current.children.length > 0) {
       gsapanim.fromTo(
         techStackRef.current.children,
@@ -45,7 +46,7 @@ const tech = [
         }
       );
     }
-  }, [delay]);
+  },{ dependencies: [] } );
 
     useEffect(() => {
         if (techStackRef.current && techStackRef.current.children.length > 0) {
@@ -66,7 +67,7 @@ const tech = [
 
   return (
     <div 
-      className="flex flex-wrap justify-center gap-2.5 group max-w-3xs mt-2 lg:mt-0 lg:max-w-fit cursor-help" 
+      className="flex flex-wrap justify-center gap-2.5 group max-w-3xs mt-2 lg:mt-0 lg:max-w-fit cursor-help transition-opacity duration-200 group-hover:opacity-25 hover:!opacity-100" 
       ref={techStackRef}
     >
       {tech.map((tech, index) => (

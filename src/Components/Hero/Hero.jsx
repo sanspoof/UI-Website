@@ -102,8 +102,8 @@ useEffect(() => {
         ))}
       </div>
 
-      <div className="flex flex-wrap justify-center gap-2.5 group max-w-3xs mt-2 lg:mt-0 lg:max-w-fit" ref={headerTechStack}>
-          <TechStack delay={0.8} />
+      <div className="flex flex-wrap justify-center gap-2.5 group max-w-3xs mt-2 lg:mt-0 lg:max-w-fit group" ref={headerTechStack}>
+          <TechStack delay={0.9} />
       </div>
     </header>
     <div ref={headerBorderBottom} className="w-full border-b dark:border-gray-400 border-black"></div>
