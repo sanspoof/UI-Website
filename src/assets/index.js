@@ -13,6 +13,7 @@ export { default as LinkedIn } from './linkedin.svg';
 export { default as LinkedInLight } from './linkedin-light.svg';
 
 import jsicon from './logos/js.svg';
+import tsicon from './logos/ts.svg';
 import cssicon from './logos/css.svg';
 import sassicon from './logos/sass.svg';
 import vercelicon from './logos/vercel.svg';
@@ -27,7 +28,8 @@ import figmaicon from './logos/figma.svg';
 import adobeicon from './logos/adobe.svg';
 
 export const js = { name: "JavaScript", icon: jsicon };
-export const css = { name: "CSS", icon: cssicon }; 
+export const ts = { name: "TypeScript", icon: tsicon };
+export const css = { name: "CSS", icon: cssicon };
 export const sass = { name: "Sass", icon: sassicon };
 export const vercel = { name: "Vercel", icon: vercelicon };
 export const vercelLight = { name: "Vercel", icon: verceliconLight };

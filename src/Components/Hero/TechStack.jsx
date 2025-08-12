@@ -5,7 +5,7 @@ import { useGSAP } from '@gsap/react';
 import tippy from 'tippy.js';
 
 import {
-  js,css,sass,vercel,vercelLight,vite,tailwind,react,supabase,dotnet,gsap,figma,adobe
+  js,ts,css,sass,vercel,vercelLight,vite,tailwind,react,supabase,dotnet,gsap,figma,adobe
 
 } from '../../assets';
 
@@ -17,6 +17,7 @@ function TechStack({ techstack, delay = 0 }) {
 
 const tech = [
   js,
+  ts,
   css,
   sass,
   isDark ? vercelLight : vercel,
@@ -34,7 +35,7 @@ const tech = [
     if (techStackRef.current && techStackRef.current.children.length > 0) {
       gsapanim.fromTo(
         techStackRef.current.children,
-        { opacity: 0, y: 4 },
+        { opacity: 0, y: 10 },
         { 
           opacity: 1, 
           y: 0, 
