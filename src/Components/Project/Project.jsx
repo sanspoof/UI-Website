@@ -24,7 +24,7 @@ function Project({
     return (
         <section className="grid xl:grid-cols-[1fr_1fr] items-center relative xl:pl-0 border border-neutral-800 dark:border-gray-400 xl:pt-6 xl:pb-6">
             {comingSoon && <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-100 text-black text-2xl font-bold">Coming Soon</div>}
-            <div className={`grid grid-cols-[80px_1fr] pt-10 pb-10 pr-6 xl:pr-10 xl:py-20 ${comingSoon ? "opacity-15 pointer-events-none select-none" : ""}`}>
+            <div className={`grid grid-cols-[100px_1fr] pt-10 pb-10 pr-6 xl:pr-10 xl:py-20 ${comingSoon ? "opacity-15 pointer-events-none select-none" : ""}`}>
                 
                 <div className="w-full flex flex-col relative items-center">
                     <div 
@@ -62,7 +62,7 @@ function Project({
                     {techstack.length > 0 && (
                         
                             <div className="flex flex-wrap gap-2 relative">
-                                <div className='absolute left-[-60px] bg-white w-10 h-8.5 flex items-center justify-center dark:bg-gray-950'>
+                                <div className='absolute left-[-70px] bg-white w-10 h-8.5 flex items-center justify-center dark:bg-gray-950'>
                                     <Square3Stack3DIcon className="size-6 text-neutral-900 dark:text-white inline-block" />
                                 </div>
                                 {techstack.map((tech, index) => ( 
@@ -77,7 +77,7 @@ function Project({
 
    
                         <div className="flex flex-wrap xl:flex-row xl:flex-nowrap gap-2 items-center xl:justify-start relative">
-                                <div className='absolute left-[-60px] bg-white w-10 h-8.5 flex items-center justify-center dark:bg-gray-950'>
+                                <div className='absolute left-[-70px] bg-white w-10 h-8.5 flex items-center justify-center dark:bg-gray-950'>
                                     <ArrowTopRightOnSquareIcon className="size-6 text-neutral-900 dark:text-white inline-block" />
                                 </div>
                             {link && (
