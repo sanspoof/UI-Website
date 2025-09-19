@@ -7,7 +7,9 @@ import {
     GitLogo,
     GitLogoLight,
     LinkedIn,
-    LinkedInLight
+    LinkedInLight,
+    AlexUILogo,
+    AlexUILogoDark
 } from '../../assets';
 
 function Header() {
@@ -38,7 +40,9 @@ useGSAP(() => {
 
     return(
         <nav ref={elNav} className="h-[55px] flex justify-between items-center px-4 lg:px-8  border-b dark:border-gray-400 border-gray-900">
-            <a className={`text-sm font-black p-0.5  ${isDark ? 'text-white hover:bg-white hover:text-black' : 'text-black hover:bg-black hover:text-white'}`} href="https://www.alexui.dev">Alex UI</a>
+            <a className="text-sm font-black p-0.5" href="https://www.alexui.dev">
+                <img className="h-7 inline-block mr-2" src={isDark ? AlexUILogoDark : AlexUILogo} alt="AlexUI Logo" title="Alex UI"/>
+            </a>
             <div className="flex gap-4 items-center">
                 <ColorModeButton />
                 <a title="GitHub" className="" href="https://github.com/sanspoof/" target="_blank" rel="noopener noreferrer">

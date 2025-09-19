@@ -50,7 +50,7 @@ function ProjectContainer() {
   }, []);
 
   return (
-    <div className="grid gap-32 px-4 lg:px-8 py-8 lg:py-20" ref={containerRef}>
+    <div className="grid gap-32 px-4 lg:px-4 py-8 lg:py-20" ref={containerRef}>
       {projectData.map((projectitem, id) => (
         <div
           key={id}

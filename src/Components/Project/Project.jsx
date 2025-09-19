@@ -1,9 +1,9 @@
-import { useRef, useEffect } from "react";
 import { useTheme } from '../../Context/ThemeContext';
-import tippy from 'tippy.js';
+import { Square3Stack3DIcon, ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
 
 function Project({ 
     name, 
+    brandColors = [],
     subtitle, 
     description, 
     link, 
@@ -20,76 +20,94 @@ function Project({
 
     const { isDark } = useTheme();
 
-    const techStackRef = useRef(null);
-
-    useEffect(() => {
-        if (techStackRef.current && techstack.length > 0) {
-
-            const techIcons = techStackRef.current.querySelectorAll('[data-tippy-content]');
-            
-            techIcons.forEach((icon) => {
-                tippy(icon, {
-                    content: icon.getAttribute('data-tippy-content'),
-                    placement: 'bottom',
-                    duration:0
-                });
-            });
-
-        }
-
-    }, [techstack]);
-
+    
     return (
-        <section className="grid lg:grid-cols-2 items-center gap-8 relative">
+        <section className="grid xl:grid-cols-[1fr_1fr] items-center relative xl:pl-0 border border-neutral-800 dark:border-gray-400 xl:pt-6 xl:pb-6">
             {comingSoon && <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-100 text-black text-2xl font-bold">Coming Soon</div>}
-            <div className={`flex text-center items-center lg:items-baseline lg:text-left gap-4 lg:gap-3 flex-col justify-items-start ${comingSoon ? "opacity-15 pointer-events-none select-none" : ""}`}>
-                <h2 className="flex flex-col items-center lg:items-baseline lg:block  relative text-3xl lg:text-4xl font-black w-fit dark:text-white text-black">{name}
-                    {beta && <span className="w-fit lg:absolute lg:-top-2 lg:ml-2 text-lg lg:rotate-6 bg-orange-600 text-white px px-2">Beta</span>}
-                    {InProgress && <span className="w-fit lg:absolute lg:-top-2 lg:ml-2 text-lg lg:rotate-6 bg-blue-600 text-white px px-2">In&nbsp;Progress</span>}
-                </h2>
-                <h3 className="text-lg lg:text-xl font-bold dark:text-white text-black">{subtitle}</h3>
-                {/* <ArrowRightIcon className="size-6 text-gray-500" /> */}
-                {description.map((paragraph, index) => (
-                    <p key={index} className="text-sm sm:text-base dark:text-gray-400 text-gray-600">
-                    {paragraph}
-                    </p>
-                ))} 
-
-                <div className="flex flex-col lg:flex-row justify-between w-full items-center lg:items-end gap-6 lg:gap-2">
-
-                        {techstack.length > 0 && (
-                            <div className="flex flex-col gap-2">
-                                <h4 className="text-sm font-bold dark:text-gray-100 text-gray-600">Tech Stack</h4>
-                                <div className="flex flex-wrap gap-x-2.5 group" ref={techStackRef}>
-                                    {techstack.map((tech, index) => ( 
-                                        <img key={index} src={tech.icon} alt={tech.name} data-tippy-content={tech.name} className="w-5 h-5 cursor-help transition-opacity duration-200 group-hover:opacity-25 hover:!opacity-100" />
-                                    ))}
-                                </div>
-                            </div>
-                        )}      
-                    <div className="flex flex-wrap lg:flex-row lg:flex-nowrap gap-2 items-center justify-center lg:justify-start">
-                        {link && (
-                                <a href={link} className={`flex w-fit items-center shrink-0 px-4 h-(--btnheight) border-2 border-gray-900  text-sm font-medium rounded-3xl  active:translate-y-px 
-                                    ${isDark ? ' text-white border-white hover:bg-white hover:text-black' : 'hover:bg-black hover:text-white text-black'}`} 
-                                    target="_blank" rel="noopener noreferrer">{linkText}</a>
-                        )}
-                        {githubLink && (
-                                <a href={githubLink} className={`flex w-fit items-center shrink-0 px-4 h-(--btnheight) border-2 border-gray-900  text-sm font-medium rounded-3xl  active:translate-y-px 
-                                    ${isDark ? ' text-white border-white hover:bg-white hover:text-black' : 'hover:bg-black hover:text-white text-black'}`}  target="_blank" rel="noopener noreferrer">
-                                    {altGithubText ? altGithubText : "View on GitHub"}
-                                </a>
-                        )}
-                        </div>          
-
+            <div className={`grid grid-cols-[80px_1fr] pt-10 pb-10 pr-6 xl:pr-10 xl:py-20 ${comingSoon ? "opacity-15 pointer-events-none select-none" : ""}`}>
+                
+                <div className="w-full flex flex-col relative items-center">
+                    <div 
+                    className="size-6 rounded-4xl border-4 border-white dark:border-gray-950 z-1 mt-2.5 shrink-0 flex items-center justify-center"
+                    style={{ backgroundColor: brandColors[1] }}
+                    ><div className="size-2 bg-white rounded-3xl "></div></div>
+                    <div className="w-px h-full bg-neutral-300 dark:bg-neutral-700 mb-10"></div>
                 </div>
+                <div className="grid gap-6">
+                    <div className="grid gap-3">
+                        <h2 className="flex gap-2 items-start text-3xl xl:text-4xl font-black w-fit dark:text-white text-black relative">{name}
+                            {beta && <span className="text-sm px-2 py-1 bg-neutral-900 text-white">Beta</span>}
+                            {InProgress && <span className="text-sm px-2 py-1 bg-neutral-900 text-white">In&nbsp;Progress</span>} 
+                        </h2>
+                        <div className="h-0.5 flex gap-1">
+                            {brandColors.length > 0 && brandColors.map((color, idx) => (
+                                <span key={idx}
+                                    className={`inline-block rounded-2xl ${idx === 2 ? 'w-5' : idx === 1 ? 'w-8' : 'w-3'}`}
+                                    style={{ backgroundColor: color }}
+                                ></span>
+                            ))}
+                        </div>
+                        <h3 className="text-lg xl:text-xl font-bold dark:text-white text-black">{subtitle}</h3>
+                    </div>
+
+                    {/* <ArrowRightIcon className="size-6 text-gray-500" /> */}
+                    <div className="flex flex-col gap-2">
+                        {description.map((paragraph, index) => (
+                            <p key={index} className="sm:text-base/8 tracking-normal dark:text-gray-200 text-neutral-600">
+                            {paragraph}
+                            </p>
+                        ))} 
+                    </div>
+
+                    {techstack.length > 0 && (
+                        
+                            <div className="flex flex-wrap gap-2 relative">
+                                <div className='absolute left-[-60px] bg-white w-10 h-8.5 flex items-center justify-center dark:bg-gray-950'>
+                                    <Square3Stack3DIcon className="size-6 text-neutral-900 dark:text-white inline-block" />
+                                </div>
+                                {techstack.map((tech, index) => ( 
+                                    <div className="flex items-center gap-2 px-2 py-1.5 text-sm font-bold border-1 border-dashed rounded-xs border-neutral-300 dark:border-neutral-200 dark:text-white" key={index}> 
+                                        <img src={tech.icon} alt={tech.name} data-tippy-content={tech.name} className="w-5 h-5 transition-opacity duration-200" />
+                                        <span className="">{tech.name}</span>
+                                    </div>
+                                ))}
+                            </div>
+                        
+                    )}   
+
+   
+                        <div className="flex flex-wrap xl:flex-row xl:flex-nowrap gap-2 items-center xl:justify-start relative">
+                                <div className='absolute left-[-60px] bg-white w-10 h-8.5 flex items-center justify-center dark:bg-gray-950'>
+                                    <ArrowTopRightOnSquareIcon className="size-6 text-neutral-900 dark:text-white inline-block" />
+                                </div>
+                            {link && (
+                                    <a href={link} 
+                                        className="flex w-fit items-center shrink-0 px-6 h-(--btnheight) rounded-sm text-sm active:translate-y-px text-white font-bold"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        style={{ backgroundColor: brandColors[1] }}
+                                        >{linkText}</a>
+                            )}
+                            {githubLink && (
+                                    <a href={githubLink} 
+                                        className="flex w-fit items-center shrink-0 px-6 h-(--btnheight) border border-gray-900 rounded-sm font-bold text-sm active:translate-y-px dark:border-neutral-200 dark:text-white hover:bg-neutral-900 hover:text-white"
+                                        target="_blank" rel="noopener noreferrer">
+                                        {altGithubText ? altGithubText : "View on GitHub"}
+                                    </a>
+                            )}
+                            </div>          
+
+                    
+                </div>
+
 
 
             </div>
             
-            <figure className={`flex -order-1 lg:order-2 justify-center lg:justify-end ${comingSoon ? "opacity-15 pointer-events-none select-none" : ""}` }>
-                {imgUrl && <img className="rounded-xl  max-w-(--projectmediamaxwidth) w-full dark:shadow-(--customShadowDark) shadow-(--customShadowLight)" src={imgUrl} alt={name} loading="lazy"  />}
+            <figure className={`flex -order-1 xl:order-2 justify-center border border-neutral-400 xl:pt-16 xl:pb-16 p-4 xl:justify-end xl:h-full m-6 ${comingSoon ? "opacity-15 pointer-events-none select-none" : ""}` }>
+                {imgUrl && <img className="rounded-xl  max-w-(--projectmediamaxwidth) w-full" src={imgUrl} alt={name} loading="lazy"  />}
                 {videoURL && (
-                    <video height="auto" className="rounded-xl  max-w-(--projectmediamaxwidth) w-full dark:shadow-(--customShadowDark) shadow-(--customShadowLight)" autoPlay muted playsInline loop >
+                    <video height="auto" className=" w-full" autoPlay muted playsInline loop >
                         <source src={videoURL} type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>

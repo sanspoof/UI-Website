@@ -11,6 +11,8 @@ export { default as GitLogo } from './github-mark.svg';
 export { default as GitLogoLight } from './github-mark-light.svg';
 export { default as LinkedIn } from './linkedin.svg';
 export { default as LinkedInLight } from './linkedin-light.svg';
+export { default as AlexUILogo } from './alexui-logo.svg';
+export { default as AlexUILogoDark } from './alexui-logo-dark.svg';
 
 import jsicon from './logos/js.svg';
 import tsicon from './logos/ts.svg';

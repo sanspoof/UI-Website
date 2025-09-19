@@ -19,6 +19,7 @@ export function useProjectData() {
   return [
   {
     name: "eStream by Uniguest",
+    brandColors: ["#FFC52B", "#20A0DB", "#A11BE9"],
     subtitle: "My day job was working as the Lead UI/UX Developer for eStream by Uniguest",
     description: 
     [
@@ -39,6 +40,7 @@ export function useProjectData() {
   }, 
   {
     name: "SuperScale",
+    brandColors: ["#D14E7F", "#595AFF", "#FF931E"],
     subtitle: "A passion of mine is playing guitar, I wanted the simplest way possible of referencing notes and scales on the guitar neck.",
     description: [
       "All other solutions available were either too complicated or not fit for purpose, so I created SuperScale for myself and hopefully a resource for others.  Lots more content for this site is coming soon, this includes chords, a metronome, tuner and hopefully much more.  Right now it is in beta, so please feel free to try it out and let me know what you think.",
@@ -61,6 +63,7 @@ export function useProjectData() {
   },
   {
     name: "REEL",
+    brandColors: ["#FE9a00", "#AE1D1D", "#454545"],
     subtitle: "A passion of mine is film, so using React and a headless CMS I've started to build a new version from the ground up...",
     description: 
     [
@@ -86,6 +89,7 @@ export function useProjectData() {
   },
   {
     name: "This Portfolio Site",
+    brandColors: ["#FF6600", "#000000", "#454545"],
     subtitle: "Maybe this is cheating, but this site is a project in itself, built with React and Tailwind CSS",
     description: 
     [
@@ -108,6 +112,7 @@ export function useProjectData() {
   },
   {
     name: "Easy Image Compress",
+    brandColors: ["#FF6600", "#000000", "#454545"],
     subtitle: "Simple Utility that runs in the command line, it can help compress a large number of images",
     description: [
       "We've all been there (kinda), you want to convert or compress a large number of images in a folder, but you dont have time? This easy little utility can help.",
