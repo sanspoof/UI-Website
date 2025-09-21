@@ -30,7 +30,7 @@ export function useProjectData() {
     imgUrl: "",
     videoURL:estreamVideo,
     link: "https://uniguest.com/estream/",
-    linkText: "Read More About eStream",
+    linkText: "Read About eStream",
     githubLink: "",
     techstack:[
       js,

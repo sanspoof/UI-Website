@@ -29,6 +29,8 @@ html.dark {
     @apply bg-gray-950;
 }
 
+
+
 @custom-variant dark (&:where(.dark, .dark *));
 
 ::selection {
@@ -38,12 +40,24 @@ html.dark {
 
 
 @layer components { 
-
     .tippy-box {
         @apply bg-gray-900 px-1.5 py-1 text-xs rounded-sm text-white font-medium;
     }
 }
 
+
+:root {
+    
+    --projectSidebarWidth:100px;
+    --projectSidebarIconContainerWidth:40px;
+    --projectSidebarIconOffset: calc( ((var(--projectSidebarWidth) / 2 ) + (var(--projectSidebarIconContainerWidth) / 2 )) * -1 );
+
+}
+@media (max-width: 768px) {
+    :root {
+        --projectSidebarWidth:80px;
+    }
+}
 @theme {
     --customShadowLight : 0 0 20px #0000004d;
     --customShadowDark : 0 0 20px #ffffff40;

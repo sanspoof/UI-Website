@@ -1,7 +1,7 @@
 import { useTheme } from '../../Context/ThemeContext';
 import { Square3Stack3DIcon, ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
 
-function Project({ 
+export default function Project({ 
     name, 
     brandColors = [],
     subtitle, 
@@ -22,20 +22,19 @@ function Project({
 
     
     return (
-        <section className="grid xl:grid-cols-[1fr_1fr] items-center relative xl:pl-0 border border-neutral-800 dark:border-gray-400 xl:pt-6 xl:pb-6">
+        <section className="grid xl:grid-cols-[1fr_1fr] items-center relative xl:pl-0 md:border border-neutral-800 dark:border-gray-400 xl:pt-6 xl:pb-6">
             {comingSoon && <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-100 text-black text-2xl font-bold">Coming Soon</div>}
-            <div className={`grid grid-cols-[100px_1fr] pt-10 pb-10 pr-6 xl:pr-10 xl:py-20 ${comingSoon ? "opacity-15 pointer-events-none select-none" : ""}`}>
+            <div className={`grid grid-cols-[var(--projectSidebarWidth)_1fr] pt-10 pb-10 pr-6 xl:pr-10 xl:py-20 ${comingSoon ? "opacity-15 pointer-events-none select-none" : ""}`}>
                 
                 <div className="w-full flex flex-col relative items-center">
-                    <div 
-                    className="size-6 rounded-4xl border-4 border-white dark:border-gray-950 z-1 mt-2.5 shrink-0 flex items-center justify-center"
+                    <div className="size-6 rounded-4xl border-4 border-white dark:border-gray-950 z-1 mt-2.5 shrink-0 flex items-center justify-center"
                     style={{ backgroundColor: brandColors[1] }}
                     ><div className="size-2 bg-white rounded-3xl "></div></div>
                     <div className="w-px h-full bg-neutral-300 dark:bg-neutral-700 mb-10"></div>
                 </div>
                 <div className="grid gap-6">
                     <div className="grid gap-3">
-                        <h2 className="flex gap-2 items-start text-3xl xl:text-4xl font-black w-fit dark:text-white text-black relative">{name}
+                        <h2 className="flex gap-2 items-start text-2xl md:text-3xl xl:text-4xl font-black w-fit dark:text-white text-black relative">{name}
                             {beta && <span className="text-sm px-2 py-1 bg-neutral-900 text-white">Beta</span>}
                             {InProgress && <span className="text-sm px-2 py-1 bg-neutral-900 text-white">In&nbsp;Progress</span>} 
                         </h2>
@@ -47,29 +46,24 @@ function Project({
                                 ></span>
                             ))}
                         </div>
-                        <h3 className="text-lg xl:text-xl font-bold dark:text-white text-black">{subtitle}</h3>
+                        <h3 className="md:text-lg xl:text-xl font-bold dark:text-white text-black">{subtitle}</h3>
                     </div>
 
                     {/* <ArrowRightIcon className="size-6 text-gray-500" /> */}
                     <div className="flex flex-col gap-2">
                         {description.map((paragraph, index) => (
-                            <p key={index} className="sm:text-base/8 tracking-normal dark:text-gray-200 text-neutral-600">
-                            {paragraph}
-                            </p>
+                            <ProjectParagraph key={index} paragraph={paragraph} />
                         ))} 
                     </div>
 
                     {techstack.length > 0 && (
                         
                             <div className="flex flex-wrap gap-2 relative">
-                                <div className='absolute left-[-70px] bg-white w-10 h-8.5 flex items-center justify-center dark:bg-gray-950'>
+                                <div className='absolute left-[var(--projectSidebarIconOffset)] bg-white w-[var(--projectSidebarIconContainerWidth)] h-8.5 flex items-center justify-center dark:bg-gray-950'>
                                     <Square3Stack3DIcon className="size-6 text-neutral-900 dark:text-white inline-block" />
                                 </div>
                                 {techstack.map((tech, index) => ( 
-                                    <div className="flex items-center gap-2 px-2 py-1.5 text-sm font-bold border-1 border-dashed rounded-xs border-neutral-300 dark:border-neutral-200 dark:text-white" key={index}> 
-                                        <img src={tech.icon} alt={tech.name} data-tippy-content={tech.name} className="w-5 h-5 transition-opacity duration-200" />
-                                        <span className="">{tech.name}</span>
-                                    </div>
+                                    <TechStack key={index} index={index} tech={tech} />
                                 ))}
                             </div>
                         
@@ -77,7 +71,7 @@ function Project({
 
    
                         <div className="flex flex-wrap xl:flex-row xl:flex-nowrap gap-2 items-center xl:justify-start relative">
-                                <div className='absolute left-[-70px] bg-white w-10 h-8.5 flex items-center justify-center dark:bg-gray-950'>
+                                <div className='absolute left-[var(--projectSidebarIconOffset)] bg-white w-[var(--projectSidebarIconContainerWidth)] h-8.5 flex items-center justify-center dark:bg-gray-950'>
                                     <ArrowTopRightOnSquareIcon className="size-6 text-neutral-900 dark:text-white inline-block" />
                                 </div>
                             {link && (
@@ -120,4 +114,19 @@ function Project({
 
 }
 
-export default Project;
+function TechStack({ index, tech }) {
+    return (
+            <div className="flex items-center gap-2 px-2 py-1.5 text-sm font-bold border-1 border-dashed rounded-xs border-neutral-300 dark:border-neutral-200 dark:text-white" key={index}> 
+                <img src={tech.icon} alt={tech.name} data-tippy-content={tech.name} className="w-5 h-5 transition-opacity duration-200" />
+                <span className="">{tech.name}</span>
+            </div>
+    );
+}
+
+function ProjectParagraph({ paragraph }) { 
+    return (
+        <p className="text-base/7 md:text-base/8 tracking-normal dark:text-gray-200 text-neutral-600">
+            {paragraph}
+        </p>
+    );
+}
