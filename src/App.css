@@ -1,4 +1,3 @@
-@import url("https://p.typekit.net/p.css?s=1&k=xgw2mdk&ht=tk&f=49080.49086.49089&a=314682734&app=typekit&e=css");
 @import "tailwindcss";
 
 @font-face {
@@ -26,7 +25,7 @@ body {
 }
 
 html.dark {
-    @apply bg-gray-950;
+    @apply bg-neutral-900;
 }
 
 

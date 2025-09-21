@@ -23,7 +23,7 @@ export default function Project({
     
     return (
         <section className="grid xl:grid-cols-[1fr_1fr] items-center relative xl:pl-0 md:border border-neutral-800 dark:border-gray-400 xl:pt-6 xl:pb-6">
-            {comingSoon && <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-100 text-black text-2xl font-bold">Coming Soon</div>}
+            {comingSoon && <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-100 text-black text-2xl font-bold dark:text-white">Coming Soon</div>}
             <div className={`grid grid-cols-[var(--projectSidebarWidth)_1fr] pt-10 pb-10 pr-6 xl:pr-10 xl:py-20 ${comingSoon ? "opacity-15 pointer-events-none select-none" : ""}`}>
                 
                 <div className="w-full flex flex-col relative items-center">
