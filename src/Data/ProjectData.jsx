@@ -36,7 +36,7 @@ export function useProjectData() {
       js,
       sass,
       dotnet
-    ]
+    ],
   }, 
   {
     name: "SuperScale",
