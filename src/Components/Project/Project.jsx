@@ -27,16 +27,14 @@ export default function Project({
             <div className={`grid grid-cols-[var(--projectSidebarWidth)_1fr] pt-10 pb-10 pr-6 xl:pr-10 xl:py-20 ${comingSoon ? "opacity-15 pointer-events-none select-none" : ""}`}>
                 
                 <div className="w-full flex flex-col relative items-center">
-                    <div className="size-6 rounded-4xl border-4 border-white dark:border-gray-950 z-1 mt-2.5 shrink-0 flex items-center justify-center"
-                    style={{ backgroundColor: brandColors[1] }}
-                    ><div className="size-2 bg-white rounded-3xl "></div></div>
+                    <div className="size-5 rounded-4xl border-4 border-white dark:border-neutral-900 z-1 mt-2.5 shrink-0 flex items-center justify-center"><div className="size-2 bg-neutral-900 dark:bg-neutral-50 rounded-3xl "></div></div>
                     <div className="w-px h-full bg-neutral-300 dark:bg-neutral-700 mb-10"></div>
                 </div>
                 <div className="grid gap-6">
                     <div className="grid gap-3">
                         <h2 className="flex gap-2 items-start text-2xl md:text-3xl xl:text-4xl font-black w-fit dark:text-white text-black relative">{name}
-                            {beta && <span className="text-sm px-2 py-1 bg-neutral-900 text-white">Beta</span>}
-                            {InProgress && <span className="text-sm px-2 py-1 bg-neutral-900 text-white">In&nbsp;Progress</span>} 
+                            {beta && <span className="text-sm px-2 py-1 bg-neutral-600 text-white">Beta</span>}
+                            {InProgress && <span className="text-sm px-2 py-1 bg-neutral-600 text-white">In&nbsp;Progress</span>} 
                         </h2>
                         <div className="h-0.5 flex gap-1">
                             {brandColors.length > 0 && brandColors.map((color, idx) => (
@@ -59,8 +57,8 @@ export default function Project({
                     {techstack.length > 0 && (
                         
                             <div className="flex flex-wrap gap-2 relative">
-                                <div className='absolute left-[var(--projectSidebarIconOffset)] bg-white w-[var(--projectSidebarIconContainerWidth)] h-8.5 flex items-center justify-center dark:bg-gray-950'>
-                                    <Square3Stack3DIcon className="size-6 text-neutral-900 dark:text-white inline-block" />
+                                <div className='absolute left-[var(--projectSidebarIconOffset)] bg-white w-[var(--projectSidebarIconContainerWidth)] h-8.5 flex items-center justify-center dark:bg-neutral-900'>
+                                    <Square3Stack3DIcon className="size-5 text-neutral-900 dark:text-white inline-block" />
                                 </div>
                                 {techstack.map((tech, index) => ( 
                                     <TechStack key={index} index={index} tech={tech} />
@@ -71,8 +69,8 @@ export default function Project({
 
    
                         <div className="flex flex-wrap xl:flex-row xl:flex-nowrap gap-2 items-center xl:justify-start relative">
-                                <div className='absolute left-[var(--projectSidebarIconOffset)] bg-white w-[var(--projectSidebarIconContainerWidth)] h-8.5 flex items-center justify-center dark:bg-gray-950'>
-                                    <ArrowTopRightOnSquareIcon className="size-6 text-neutral-900 dark:text-white inline-block" />
+                                <div className='absolute left-[var(--projectSidebarIconOffset)] bg-white w-[var(--projectSidebarIconContainerWidth)] h-8.5 flex items-center justify-center dark:bg-neutral-900'>
+                                    <ArrowTopRightOnSquareIcon className="size-5 text-neutral-900 dark:text-white inline-block" />
                                 </div>
                             {link && (
                                     <a href={link} 
@@ -84,7 +82,7 @@ export default function Project({
                             )}
                             {githubLink && (
                                     <a href={githubLink} 
-                                        className="flex w-fit items-center shrink-0 px-6 h-(--btnheight) border border-gray-900 rounded-sm font-bold text-sm active:translate-y-px dark:border-neutral-200 dark:text-white hover:bg-neutral-900 hover:text-white"
+                                        className="flex w-fit items-center shrink-0 px-6 h-(--btnheight) border border-gray-900 rounded-sm font-bold text-sm active:translate-y-px dark:border-neutral-200 dark:text-white hover:bg-neutral-900 hover:text-white dark:hover:bg-neutral-700"
                                         target="_blank" rel="noopener noreferrer">
                                         {altGithubText ? altGithubText : "View on GitHub"}
                                     </a>
