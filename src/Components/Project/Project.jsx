@@ -96,7 +96,7 @@ export default function Project({
 
             </div>
             
-            <figure className={`flex -order-1 xl:order-2 justify-center border border-neutral-400 xl:pt-16 xl:pb-16 p-4 bg-neutral-950 xl:h-full m-6 xl:m-0 ${comingSoon ? "opacity-15 pointer-events-none select-none" : ""}` }>
+            <figure className={`flex -order-1 xl:order-2 justify-center border border-neutral-400 xl:py-8 p-4 bg-neutral-950 rounded-md xl:h-full m-6 xl:m-0 ${comingSoon ? "opacity-15 pointer-events-none select-none" : ""}` }>
                 {imgUrl && <img className="rounded-xl  max-w-(--projectmediamaxwidth) w-full" src={imgUrl} alt={name} loading="lazy"  />}
                 {videoURL && (
                     <video height="auto" className=" w-full" autoPlay muted playsInline loop >
